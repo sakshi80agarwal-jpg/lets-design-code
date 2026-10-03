@@ -1,0 +1,2171 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Sakshi Agarwal is a Frontend Developer and UI/UX Designer creating responsive, user-centered digital experiences.">
+    <title>Sakshi Agarwal | Frontend Developer & UI/UX Designer </title>
+    <link rel="shortcut icon" href="assets/Navlogo.jpg" type="image/x-icon">
+    <link rel="stylesheet" href="style/portfolio.css">
+    <link rel="stylesheet" href="style/home.css">
+    <link rel="stylesheet" href="style/work.css">
+    <link rel="stylesheet" href="style/services.css">
+    <link rel="stylesheet" href="style/about.css">
+    <link rel="stylesheet" href="style/testimonial.css">
+    <link rel="stylesheet" href="style/contact.css">
+    <link rel="stylesheet" href="style/footer.css">
+
+    <!-- Boxicons CSS for Icons -->
+    <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet" />
+
+</head>
+
+<body>
+    <!-- PRELOADER -->
+    <div id="preloader">
+        <div class="eye-tracker">
+            <div class="eye">
+                <div class="pupil"></div>
+            </div>
+            <div class="eye">
+                <div class="pupil"></div>
+            </div>
+        </div>
+        <img class="logo-img" src="assets/logo.png" alt="logo">
+        <div class="progress-box">
+            <div class="progress-bar" id="progressBar"></div>
+        </div>
+        <span class="progress-text" id="progressText">Click Start to Load</span>
+        <button class="start-btn" id="startBtn" onclick="startLoading()">
+            <i class='bx bx-play'></i> Start Experience
+        </button>
+    </div>
+
+    <!-- INTRO VIDEO OVERLAY -->
+    <div id="videoContainer">
+        <button class="skip-btn" onclick="endVideo()">Skip Intro <i class='bx bx-right-arrow-alt'></i></button>
+        <video id="introVideo" playsinline>
+            <source src="assets/Intro.mp4" type="video/mp4" />
+            Your browser does not support the video tag.
+        </video>
+    </div>
+
+    <div id="pageTransition"></div>
+
+    <!-- MAIN PORTFOLIO -->
+    <div id="mainWebsite">
+
+        <!-- NAVBAR OVERLAY FOR MOBILE -->
+        <div class="nav-overlay" id="navOverlay" onclick="closeMenu()"></div>
+
+        <!-- HEADER / NAVBAR -->
+        <header class="header">
+            <div class="logo">
+                <img src="assets/Navlogo.jpg" alt="">
+                <h2 class="title">Portfolio</h2>
+            </div>
+
+            <!-- Hamburger Icon -->
+            <div class="menu-icon" id="menuIcon" onclick="toggleMenu()">
+                <i class='bx bx-menu' id="menuBtnIcon"></i>
+            </div>
+
+            <nav class="navbar" id="navbar">
+                <a href="#home" class="nav-link" onclick="setActiveLink(this); closeMenu();">Home</a>
+                <a href="#work" class="nav-link" onclick="setActiveLink(this); closeMenu();">Work</a>
+                <a href="#services" class="nav-link" onclick="setActiveLink(this); closeMenu();">Services</a>
+                <a href="#about" class="nav-link" onclick="setActiveLink(this); closeMenu();">About</a>
+                <a href="#testimonials" class="nav-link" onclick="setActiveLink(this); closeMenu();">Testimonial</a>
+                <a href="#contact" class="nav-link" onclick="setActiveLink(this); closeMenu();">Contact</a>
+            </nav>
+        </header>
+
+        <!-- HOME SECTION -->
+        <section class="home" id="home">
+            <div class="home-content">
+                <h2>
+                    <span>Sakshi</span> Agarwal
+                </h2>
+                <h3>I'm a<span class="typing-text" id="typingText"></span></h3>
+                <p>Creator of <span style=color:var(--main-color);>Let’s Design.Code</span>, where design meets
+                    development. I love turning ideas into meaningful digital experiences through thoughtful design and
+                    creative development, bringing every detail to life through websites and digital products.</p>
+                <div class="bottom">
+                    <a href="#work" class="btn">View My Work</a>
+
+                    <div class="social-media">
+                        <a href="https://www.linkedin.com/in/sakshi-agarwal-6245343a4/"><i
+                                class='bx bxl-linkedin'></i></a>
+                        <a href="https://github.com/sakshi80agarwal-jpg"><i class='bx bxl-github'></i></a>
+                        <a href="https://youtube.com/@sakshi_uiux?si=vqbSMN4cwkcKek_c"><i
+                                class='bx bxl-youtube'></i></a>
+                        <a href="https://www.instagram.com/letsdesign.code?stkn=bWIxdTJteHExeW5i"><i
+                                class='bx bxl-instagram'></i></a>
+                    </div>
+                </div>
+
+            </div>
+            <div class="hero-img">
+                <img src="assets/main.png" alt="hero-img">
+            </div>
+        </section>
+
+        <!-- =====================================================
+        WORK / PROJECTS
+     ===================================================== -->
+
+        <section class="work" id="work">
+
+            <!-- =========================
+         WORK INTRO
+         ========================= -->
+
+            <div class="work-heading">
+
+                <span class="section-label">SELECTED WORK</span>
+
+                <h2>
+                    Things I've designed<br>
+                    <span>& brought to life.</span>
+                </h2>
+
+                <p>
+                    A collection of projects where ideas, interfaces,
+                    interactions and code come together.
+                </p>
+
+            </div>
+
+
+            <!-- =================================================
+         01 — UI/UX DESIGN
+         ================================================= -->
+
+            <div class="project-category uiux-category">
+
+                <div class="category-heading">
+
+                    <div class="category-title">
+                        <span>01</span>
+                        <h3>UI/UX DESIGN</h3>
+                    </div>
+
+                    <p class="category-note">
+                        Ideas → Interfaces → Experiences
+                    </p>
+
+                </div>
+
+
+                <div class="uiux-projects">
+
+
+                    <!-- =========================
+                 SAVVYCART
+                 ========================= -->
+
+                    <article class="project-card featured-project">
+
+                        <div class="project-image">
+
+                            <img src="projects/p.assets/savvycart hero.png" alt="SavvyCart mobile app">
+
+                        </div>
+
+
+                        <div class="project-info">
+
+                            <span class="project-number">01</span>
+
+                            <h3>SavvyCart</h3>
+
+                            <p>
+                                A smart e-commerce mobile experience designed
+                                to make discovering, comparing and choosing
+                                products easier.
+                            </p>
+
+                            <div class="project-tags">
+
+                                <span>Mobile App</span>
+                                <span>UX/UI Design</span>
+                                <span>Case Study</span>
+
+                            </div>
+
+                            <a href="projects/savvycart.html" class="project-link">
+                                View Case Study
+                                <span>→</span>
+                            </a>
+
+                        </div>
+
+                    </article>
+
+
+                    <!-- =========================
+                 STYLEHUB
+                 ========================= -->
+
+                    <article class="project-card">
+
+                        <div class="project-image">
+
+                            <img src="projects/p.assets/stylehub hero.png" alt="StyleHub e-commerce dashboard">
+
+                        </div>
+
+
+                        <div class="project-info">
+
+                            <span class="project-number">02</span>
+
+                            <h3>StyleHub</h3>
+
+                            <p>
+                                An e-commerce dashboard designed to help
+                                store owners manage products, orders
+                                and business insights.
+                            </p>
+
+                            <div class="project-tags">
+
+                                <span>Web App</span>
+                                <span>Dashboard</span>
+                                <span>UX/UI Design</span>
+
+                            </div>
+
+                            <a href="projects/stylehub.html" class="project-link">
+                                View Case Study
+                                <span>→</span>
+                            </a>
+
+                        </div>
+
+                    </article>
+
+
+                    <!-- =========================
+                 FOODHUT
+                 ========================= -->
+
+                    <article class="project-card">
+
+                        <div class="project-image">
+
+                            <img src="assets/foodhut.jpg" alt="FoodHut responsive food delivery website">
+
+                        </div>
+
+
+                        <div class="project-info">
+
+                            <span class="project-number">03</span>
+
+                            <h3>FoodHut</h3>
+
+                            <p>
+                                A responsive food delivery landing page
+                                focused on clean visual design and
+                                an easy browsing experience.
+                            </p>
+
+                            <div class="project-tags">
+
+                                <span>UI Design</span>
+                                <span>Responsive</span>
+                                <span>Landing Page</span>
+
+                            </div>
+
+                            <a href="https://www.figma.com/proto/XsUIakqdLiRur3IzeXLldy/Food-Landing-Page?node-id=135-206&p=f&viewport=867%2C841%2C0.08&t=e3ohcpiuknDxkJBh-1&scaling=min-zoom&content-scaling=fixed&page-id=6%3A34"
+                                target="_blank" class="project-link">
+                                View Design
+                                <span>→</span>
+                            </a>
+
+                        </div>
+
+                    </article>
+
+
+                    <!-- =========================
+                 BREWLAB
+                 ========================= -->
+
+                    <article class="project-card">
+
+                        <div class="project-image">
+
+                            <img src="assets/brewlab.jpg" alt="BrewLab coffee landing page">
+
+                        </div>
+
+
+                        <div class="project-info">
+
+                            <span class="project-number">04</span>
+
+                            <h3>BrewLab</h3>
+
+                            <p>
+                                A playful coffee landing page focused on
+                                visual storytelling, motion and
+                                interactive design.
+                            </p>
+
+                            <div class="project-tags">
+
+                                <span>UI Design</span>
+                                <span>Landing Page</span>
+                                <span>Motion</span>
+
+                            </div>
+
+                            <a href="https://www.figma.com/proto/en6jI9tOKk8Lf9e3dNg3Vs/Coffee-Landing-Page?node-id=137-386&p=f&viewport=-264%2C409%2C0.1&t=AALpkUP4tCeBpmeq-1&scaling=scale-down&content-scaling=fixed&page-id=0%3A1"
+                                target="_blank" class="project-link">
+                                View Design
+                                <span>→</span>
+                            </a>
+
+                        </div>
+
+                    </article>
+
+
+                </div>
+
+            </div>
+
+
+            <!-- =================================================
+         02 — FRAMER
+         ================================================= -->
+
+            <div class="project-category framer-category">
+
+                <div class="category-heading">
+
+                    <div class="category-title">
+                        <span>02</span>
+                        <h3>FRAMER</h3>
+                    </div>
+
+                    <p class="category-note">
+                        Designed for real businesses
+                    </p>
+
+                </div>
+
+
+                <div class="framer-projects">
+
+
+                    <!-- AUTO PALACE -->
+
+                    <article class="project-card">
+
+                        <div class="project-image">
+
+                            <img src="assets/autopalace.png" alt="Auto Palace website">
+
+                        </div>
+
+
+                        <div class="project-info">
+
+                            <span class="project-number">05</span>
+
+                            <h3>Auto Palace</h3>
+
+                            <p>
+                                A modern showroom website designed for
+                                a Pune-based pre-owned vehicle business.
+                            </p>
+
+                            <div class="project-tags">
+
+                                <span>Framer</span>
+                                <span>Client Website</span>
+                                <span>Responsive</span>
+
+                            </div>
+
+                            <a href="https://autopalace.framer.website/" target="_blank" class="project-link">
+                                View Website
+                                <span>→</span>
+                            </a>
+
+                        </div>
+
+                    </article>
+
+
+                    <!-- EKDANTA -->
+
+                    <article class="project-card">
+
+                        <div class="project-image">
+
+                            <img src="assets/ekdanta.png" alt="Ekdanta Homoeopathy and Cosmetology website">
+
+                        </div>
+
+
+                        <div class="project-info">
+
+                            <span class="project-number">06</span>
+
+                            <h3>Ekdanta Homoeopathy & Cosmetology Clinic</h3>
+
+                            <p>
+                                A responsive one-page website designed
+                                for a homoeopathy and cosmetology clinic.
+                            </p>
+
+                            <div class="project-tags">
+
+                                <span>Framer</span>
+                                <span>Client Website</span>
+                                <span>Responsive</span>
+
+                            </div>
+
+                            <a href="https://ekadantahomoepathy.framer.website/" target="_blank" class="project-link">
+                                View Website
+                                <span>→</span>
+                            </a>
+
+                        </div>
+
+                    </article>
+
+
+                    <!-- PASSION FITNESS -->
+
+                    <article class="project-card">
+
+                        <div class="project-image">
+
+                            <img src="assets/passion fitness.jpg" alt="Passion Fitness yoga website">
+
+                        </div>
+
+
+                        <div class="project-info">
+
+                            <span class="project-number">07</span>
+
+                            <h3>Passion Fitness — Yoga</h3>
+
+                            <p>
+                                A calm and minimal website designed to
+                                showcase yoga, wellness and fitness services.
+                            </p>
+
+                            <div class="project-tags">
+
+                                <span>Framer</span>
+                                <span>Client Website</span>
+                                <span>Responsive</span>
+
+                            </div>
+
+                            <a href="https://passionfitness.framer.website/" target="_blank" class="project-link">
+                                View Website
+                                <span>→</span>
+                            </a>
+
+                        </div>
+
+                    </article>
+
+
+                </div>
+
+            </div>
+
+
+            <!-- =================================================
+03 — DEVELOPMENT
+================================================= -->
+
+            <div class="project-category development-category">
+
+                <div class="category-heading">
+
+                    <div class="category-title">
+                        <span>03</span>
+                        <h3>DEVELOPMENT</h3>
+                    </div>
+
+                    <p class="category-note">
+                        Code → Functionality → Experience
+                    </p>
+
+                </div>
+
+
+                <div class="development-projects">
+
+
+                    <!-- =========================
+        SHOE WEBSITE
+        ========================= -->
+
+                    <article class="development-card">
+
+                        <div class="development-image">
+                            <img src="assets/shoe.png" alt="Shoe website">
+                        </div>
+
+                        <div class="development-info">
+
+                            <span class="project-number">07</span>
+
+                            <h3>Shoe Website</h3>
+
+                            <p>
+                                An interactive shoe website focused on
+                                immersive scrolling, product presentation
+                                and engaging web interactions.
+                            </p>
+
+                            <div class="project-tags">
+                                <span>HTML</span>
+                                <span>CSS</span>
+                                <span>JavaScript</span>
+                            </div>
+
+                            <div class="project-link">
+
+                                <a href="https://sakshi80agarwal-jpg.github.io/Velora-project/" target="_blank"
+                                    rel="noopener noreferrer">
+                                    View Live ↗
+                                </a>
+
+                                <a href="https://github.com/sakshi80agarwal-jpg/Velora-project" target="_blank"
+                                    rel="noopener noreferrer">
+                                    GitHub ↗
+                                </a>
+
+                            </div>
+
+                        </div>
+
+                    </article>
+
+
+                    <!-- =========================
+        QR CODE GENERATOR
+        ========================= -->
+
+                    <article class="development-card">
+
+                        <div class="development-image">
+                            <img src="assets/QR Code.png" alt="QR Code Generator">
+                        </div>
+
+                        <div class="development-info">
+
+                            <span class="project-number">08</span>
+
+                            <h3>QR Code Generator</h3>
+
+                            <p>
+                                A functional web tool that dynamically
+                                generates QR codes from text, links and
+                                other user-provided content.
+                            </p>
+
+                            <div class="project-tags">
+                                <span>HTML</span>
+                                <span>CSS</span>
+                                <span>JavaScript</span>
+                                <span>Web Tool</span>
+                                <span>Responsive</span>
+                            </div>
+
+                            <div class="project-link">
+
+                                <a href="https://sakshi80agarwal-jpg.github.io/QR--Code/" target="_blank"
+                                    rel="noopener noreferrer">
+                                    View Live ↗
+                                </a>
+
+                                <a href="https://github.com/sakshi80agarwal-jpg/QR--Code" target="_blank"
+                                    rel="noopener noreferrer">
+                                    GitHub ↗
+                                </a>
+
+                            </div>
+
+                        </div>
+
+                    </article>
+
+
+                    <!-- =========================
+        LET'S DESIGN.CODE
+        ========================= -->
+
+                    <article class="development-card">
+
+                        <div class="development-image">
+                            <img src="assets/portfolio.png" alt="Let's Design.Code portfolio">
+                        </div>
+
+                        <div class="development-info">
+
+                            <span class="project-number">09</span>
+
+                            <h3>Let's Design.Code</h3>
+
+                            <p>
+                                My personal portfolio designed and developed
+                                from scratch, bringing together design,
+                                development and interactive experiences.
+                            </p>
+
+                            <div class="project-tags">
+                                <span>HTML</span>
+                                <span>CSS</span>
+                                <span>JavaScript</span>
+                                <span>Responsive</span>
+                            </div>
+
+                            <div class="project-link">
+                                <a href="YOUR-PORTFOLIO-GITHUB-LINK" target="_blank" rel="noopener noreferrer">
+                                    GitHub ↗
+                                </a>
+
+                            </div>
+
+                        </div>
+
+                    </article>
+
+
+                </div>
+
+            </div>
+
+
+            <!-- =================================================
+         WORK CTA
+         ================================================= -->
+
+            <div class="work-cta">
+
+                <div class="work-cta-text">
+
+                    <p>Liked what you saw?</p>
+
+                    <h3>
+                        Let's build something
+                        <span>meaningful next.</span>
+                    </h3>
+
+                </div>
+
+
+                <a href="#contact" class="cta-button">
+                    Let's Talk
+                    <span>→</span>
+                </a>
+
+            </div>
+
+
+        </section>
+
+        <!-- =====================================================
+     SERVICES
+     ===================================================== -->
+
+        <section class="services" id="services">
+
+            <!-- SERVICES INTRO -->
+
+            <div class="services-heading">
+
+                <span class="section-label">WHAT I DO</span>
+
+                <h2>
+                    Design it. Build it.<br>
+                    <span>Make it meaningful.</span>
+                </h2>
+
+                <p>
+                    I combine thoughtful design with front-end development
+                    to create digital experiences that look good, feel intuitive,
+                    and actually work.
+                </p>
+
+            </div>
+
+
+            <!-- SERVICES GRID -->
+
+            <div class="services-grid">
+
+
+                <!-- SERVICE 01 -->
+
+                <article class="service-card">
+
+                    <div class="service-top">
+
+                        <div class="service-identity">
+
+                            <span class="service-number">01</span>
+
+                            <span class="service-icon">✦</span>
+
+                        </div>
+
+                        <span class="service-arrow">↗</span>
+
+                    </div>
+
+
+                    <div class="service-content">
+
+                        <h3>UI/UX Design</h3>
+
+                        <p>
+                            From idea to interface — creating user-focused
+                            digital experiences built around clarity,
+                            usability and thoughtful visual design.
+                        </p>
+
+                    </div>
+
+
+                    <div class="service-tags">
+
+                        <span>User Flows</span>
+                        <span>Wireframing</span>
+                        <span>UI Design</span>
+                        <span>Prototyping</span>
+                        <span>Design Systems</span>
+
+                    </div>
+
+                </article>
+
+
+                <!-- SERVICE 02 -->
+
+                <article class="service-card">
+
+                    <div class="service-top">
+
+                        <div class="service-identity">
+
+                            <span class="service-number">01</span>
+
+                            <span class="service-icon">◇</span>
+
+                        </div>
+
+                        <span class="service-arrow">↗</span>
+
+                    </div>
+
+
+                    <div class="service-content">
+
+                        <h3>Web Design & Framer</h3>
+
+                        <p>
+                            Websites that feel as good as they look —
+                            with strong visual direction, clear structure,
+                            responsive layouts and engaging interactions.
+                        </p>
+
+                    </div>
+
+
+                    <div class="service-tags">
+
+                        <span>Landing Pages</span>
+                        <span>Responsive Design</span>
+                        <span>Framer</span>
+                        <span>Interactions</span>
+                        <span>Client Websites</span>
+
+                    </div>
+
+                </article>
+
+
+                <!-- SERVICE 03 -->
+
+                <article class="service-card">
+
+                    <div class="service-top">
+
+                        <div class="service-identity">
+
+                            <span class="service-number">01</span>
+
+                            <span class="service-icon">&lt;/&gt;</span>
+
+                        </div>
+
+                        <span class="service-arrow">↗</span>
+
+                    </div>
+
+
+                    <div class="service-content">
+
+                        <h3>Front-End Development</h3>
+
+                        <p>
+                            Bringing thoughtful designs to
+                            life through responsive,
+                            interactive interfaces built with
+                            clean code and purposeful details.
+                        </p>
+
+                    </div>
+
+
+                    <div class="service-tags">
+
+                        <span>HTML</span>
+                        <span>CSS</span>
+                        <span>JavaScript</span>
+                        <span>Responsive UI</span>
+                        <span>Interactions</span>
+
+                    </div>
+
+                </article>
+
+
+            </div>
+
+
+            <!-- SERVICES STATEMENT -->
+
+            <div class="services-statement">
+
+                <p>
+                    Good design shouldn't stop at the screen.
+                    <span>It should work behind it too.</span>
+                </p>
+
+                <div class="design-code-line">
+
+                    <span>DESIGN</span>
+
+                    <div class="connection-line"></div>
+
+                    <span>DEVELOPMENT</span>
+
+                </div>
+
+            </div>
+
+        </section>
+
+        <!-- =====================================================
+     ABOUT SECTION
+     ===================================================== -->
+
+        <section class="about" id="about">
+
+
+            <!-- ABOUT MAIN -->
+            <div class="about-main">
+
+
+                <!-- =================================================
+             LEFT SIDE — ID CARD + TABS
+             ================================================= -->
+
+                <div class="about-left">
+
+
+                    <!-- ID CARD AREA -->
+                    <div class="about-card-area">
+
+                        <div class="id-card-wrapper">
+
+
+                            <!-- ID STRAP -->
+                            <div class="id-lanyard">
+
+                                <div class="lanyard-strap">
+                                    <span class="strap-stitch"></span>
+                                </div>
+
+                                <div class="lanyard-ring">
+                                    <span class="ring-inner"></span>
+                                </div>
+
+                            </div>
+
+
+                            <!-- ID CARD -->
+                            <div class="id-card">
+
+                                <!-- SIMPLE CARD PATTERN -->
+                                <div class="id-card-pattern"></div>
+
+                                <!-- PHOTO ONLY -->
+                                <div class="id-photo">
+
+                                    <img src="assets/sakshi.png" alt="Sakshi">
+
+                                </div>
+
+
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- =================================================
+                 TABS
+                 ================================================= -->
+
+                    <nav class="about-tabs" aria-label="About navigation">
+
+                        <button class="about-tab active" data-tab="about-me" type="button">
+                            <span class="tab-icon">♙</span>
+
+                            <span class="tab-text">
+                                About Me
+                            </span>
+
+                            <span class="tab-arrow">
+                                →
+                            </span>
+                        </button>
+
+
+                        <button class="about-tab" data-tab="journey" type="button">
+                            <span class="tab-icon">◫</span>
+
+                            <span class="tab-text">
+                                Journey
+                            </span>
+
+                            <span class="tab-arrow">
+                                →
+                            </span>
+                        </button>
+
+
+                        <button class="about-tab" data-tab="education" type="button">
+                            <span class="tab-icon">♢</span>
+
+                            <span class="tab-text">
+                                Education
+                            </span>
+
+                            <span class="tab-arrow">
+                                →
+                            </span>
+                        </button>
+
+
+                        <button class="about-tab" data-tab="skills" type="button">
+                            <span class="tab-icon">⊞</span>
+
+                            <span class="tab-text">
+                                Skills
+                            </span>
+
+                            <span class="tab-arrow">
+                                →
+                            </span>
+                        </button>
+
+                        <button class="about-tab" data-tab="process" type="button">
+                            <span class="tab-icon">⌁</span>
+
+                            <span class="tab-text">
+                                Process
+                            </span>
+
+                            <span class="tab-arrow">
+                                →
+                            </span>
+                        </button>
+
+                        <button class="about-tab" data-tab="beyond-design" type="button">
+                            <span class="tab-icon">✦</span>
+
+                            <span class="tab-text">
+                                Beyond Design
+                            </span>
+
+                            <span class="tab-arrow">
+                                →
+                            </span>
+                        </button>
+
+
+
+                    </nav>
+
+                </div>
+
+
+
+                <!-- =================================================
+             RIGHT SIDE — INTRO + DYNAMIC CONTENT
+             ================================================= -->
+
+                <div class="about-right">
+
+
+                    <!-- SHORT INTRO -->
+                    <div class="about-intro">
+
+                        <h2>
+                            Hi, I'm Sakshi.
+                        </h2>
+
+                        <p>
+                            I'm a UI/UX designer and developer
+                            who enjoys turning thoughtful ideas
+                            into meaningful digital experiences.
+                        </p>
+
+                    </div>
+
+
+                    <!-- =================================================
+                 SCROLLABLE CONTENT PANE
+                 ================================================= -->
+
+                    <div class="about-content">
+
+
+                        <!-- =================================================
+                     ABOUT ME
+                     ================================================= -->
+
+                        <div class="about-panel active" data-content="about-me">
+
+                            <span class="content-label">
+                                ABOUT ME
+                            </span>
+
+                            <h3>
+                                Designing with curiosity,
+                                building with purpose.
+                            </h3>
+
+                            <p>
+                                I enjoy exploring creative solutions,
+                                understanding how people interact with
+                                digital products and creating experiences
+                                that feel simple and purposeful.
+                            </p>
+
+                            <p>
+                                My work sits between design and
+                                development, allowing me to think about
+                                both how an experience looks and how it
+                                actually works.
+                            </p>
+
+
+                            <!-- BASIC INFORMATION -->
+
+                            <div class="about-details">
+
+                                <div class="detail-item">
+                                    <span>Name</span>
+                                    <strong>Sakshi Agarwal</strong>
+                                </div>
+
+                                <div class="detail-item">
+                                    <span>Focus</span>
+                                    <strong>UI/UX Design & Development</strong>
+                                </div>
+
+                                <div class="detail-item">
+                                    <span>Location</span>
+                                    <strong>Pune, India</strong>
+                                </div>
+
+                                <div class="detail-item">
+                                    <span>Currently</span>
+                                    <strong>Learning & Building</strong>
+                                </div>
+
+                            </div>
+
+                        </div>
+
+
+
+                        <!-- =================================================
+                     JOURNEY
+                     ================================================= -->
+
+                        <div class="about-panel" data-content="journey">
+
+                            <span class="content-label">
+                                MY JOURNEY
+                            </span>
+
+                            <h3>
+                                From designing interfaces
+                                to building them.
+                            </h3>
+
+                            <p>
+                                My journey began with UI/UX design,
+                                where I discovered my interest in
+                                understanding problems and creating
+                                meaningful digital experiences.
+                            </p>
+
+                            <p>
+                                As I continued designing, I became
+                                curious about the development side
+                                of the interface. That curiosity
+                                led me toward front-end development.
+                            </p>
+
+
+                            <!-- JOURNEY ITEMS -->
+
+                            <div class="journey-list">
+
+                                <div class="journey-item">
+
+                                    <span class="journey-dot"></span>
+
+                                    <div>
+                                        <strong>UI/UX Design</strong>
+
+                                        <p>
+                                            Learning user experience,
+                                            visual design, wireframing,
+                                            prototyping and design systems.
+                                        </p>
+                                    </div>
+
+                                </div>
+
+
+                                <div class="journey-item">
+
+                                    <span class="journey-dot"></span>
+
+                                    <div>
+                                        <strong>Client Projects</strong>
+
+                                        <p>
+                                            Designing websites and digital
+                                            experiences for real businesses.
+                                        </p>
+                                    </div>
+
+                                </div>
+
+
+                                <div class="journey-item">
+
+                                    <span class="journey-dot"></span>
+
+                                    <div>
+                                        <strong>Development</strong>
+
+                                        <p>
+                                            Learning HTML, CSS and JavaScript
+                                            to bring designs to life.
+                                        </p>
+                                    </div>
+
+                                </div>
+
+                            </div>
+
+                        </div>
+
+
+
+                        <!-- =================================================
+                     EDUCATION
+                     ================================================= -->
+
+                        <div class="about-panel" data-content="education">
+
+                            <span class="content-label">
+                                EDUCATION
+                            </span>
+
+                            <h3>
+                                Learning, experimenting
+                                and growing.
+                            </h3>
+
+                            <p>
+                                My learning journey combines business
+                                education, UI/UX design and web development.
+                            </p>
+
+
+                            <!-- EDUCATION ITEMS -->
+
+                            <div class="education-list">
+
+                                <div class="education-item">
+
+                                    <span class="education-year">
+                                        BBA
+                                    </span>
+
+                                    <div>
+
+                                        <h4>
+                                            Bachelor of Business Administration
+                                        </h4>
+
+                                        <p>
+                                            Finance
+                                        </p>
+
+                                    </div>
+
+                                </div>
+
+
+                                <div class="education-item">
+
+                                    <span class="education-year">
+                                        UI/UX
+                                    </span>
+
+                                    <div>
+
+                                        <h4>
+                                            UI/UX Design
+                                        </h4>
+
+                                        <p>
+                                            User experience, visual design,
+                                            prototyping and design systems.
+                                        </p>
+
+                                    </div>
+
+                                </div>
+
+
+                                <div class="education-item">
+
+                                    <span class="education-year">
+                                        DEV
+                                    </span>
+
+                                    <div>
+
+                                        <h4>
+                                            Frontend Web Development
+                                        </h4>
+
+                                        <p>
+                                            HTML, CSS, JavaScript and
+                                            modern web development.
+                                        </p>
+
+                                    </div>
+
+                                </div>
+
+                            </div>
+
+                        </div>
+
+
+
+                        <!-- =================================================
+                     SKILLS
+                     ================================================= -->
+
+                        <div class="about-panel" data-content="skills">
+
+                            <span class="content-label">
+                                SKILLS
+                            </span>
+
+                            <h3>
+                                A mix of design thinking
+                                and development.
+                            </h3>
+
+                            <p>
+                                I enjoy working across the space between
+                                design and development, from shaping an
+                                experience to bringing the final interface
+                                to life.
+                            </p>
+
+
+                            <!-- SKILL GROUPS -->
+
+                            <div class="skill-groups">
+
+
+                                <div class="skill-group">
+
+                                    <span>
+                                        DESIGN
+                                    </span>
+
+                                    <div class="skill-list">
+
+
+
+                                        <div class="skill-item">
+
+                                            <span>UI/UX Design</span>
+                                        </div>
+
+                                        <div class="skill-item">
+
+                                            <span>Wireframing</span>
+                                        </div>
+
+                                    </div>
+
+                                </div>
+
+
+                                <div class="skill-group">
+
+                                    <span>
+                                        DEVELOPMENT
+                                    </span>
+
+                                    <div class="skill-list-dev">
+
+
+                                        <img src="assets/html.png" alt="HTML">
+
+                                        <img src="assets/css.png" alt="CSS">
+
+                                        <img src="assets/javascript.png" alt="JavaScript">
+
+
+                                    </div>
+
+                                </div>
+
+
+                                <div class="skill-group">
+
+                                    <span>
+                                        TOOLS
+                                    </span>
+
+                                    <div class="skill-list">
+
+                                        <div class="skill-item">
+                                            <img src="assets/figma.png" alt="Figma">
+                                            <span>Figma</span>
+                                        </div>
+
+                                        <div class="skill-item">
+                                            <img src="assets/framer.png" alt="Framer">
+                                            <span>Framer</span>
+                                        </div>
+
+                                        <div class="skill-item">
+                                            <img src="assets/vscode.png" alt="VS Code">
+                                            <span>VS Code</span>
+                                        </div>
+
+                                        <div class="skill-item">
+                                            <img src="assets/github.png" alt="GitHub">
+                                            <span>GitHub</span>
+                                        </div>
+
+                                    </div>
+
+                                </div>
+
+
+                            </div>
+
+                        </div>
+
+                        <!-- PROCESS -->
+
+                        <div class="about-panel" data-content="process">
+
+                            <span class="content-label">
+                                MY PROCESS
+                            </span>
+
+                            <h3>
+                                From <span>idea</span> to experience.
+                            </h3>
+
+                            <p>
+                                I combine thoughtful design with practical development
+                                to turn ideas into meaningful digital experiences.
+                            </p>
+
+
+                            <div class="process-list">
+
+                                <div class="process-item">
+
+                                    <span class="process-number">
+                                        01
+                                    </span>
+
+                                    <div>
+                                        <h4>
+                                            Discover
+                                        </h4>
+
+                                        <p>
+                                            Understand the idea, goals, users and requirements.
+                                        </p>
+                                    </div>
+
+                                </div>
+
+
+                                <div class="process-item">
+
+                                    <span class="process-number">
+                                        02
+                                    </span>
+
+                                    <div>
+                                        <h4>
+                                            Define
+                                        </h4>
+
+                                        <p>
+                                            Structure the problem and plan the overall experience.
+                                        </p>
+                                    </div>
+
+                                </div>
+
+
+                                <div class="process-item">
+
+                                    <span class="process-number">
+                                        03
+                                    </span>
+
+                                    <div>
+                                        <h4>
+                                            Design
+                                        </h4>
+
+                                        <p>
+                                            Create wireframes, visual direction, UI and prototypes.
+                                        </p>
+                                    </div>
+
+                                </div>
+
+
+                                <div class="process-item">
+
+                                    <span class="process-number">
+                                        04
+                                    </span>
+
+                                    <div>
+                                        <h4>
+                                            Develop
+                                        </h4>
+
+                                        <p>
+                                            Turn the design into a responsive and functional website.
+                                        </p>
+                                    </div>
+
+                                </div>
+
+
+                                <div class="process-item">
+
+                                    <span class="process-number">
+                                        05
+                                    </span>
+
+                                    <div>
+                                        <h4>
+                                            Refine
+                                        </h4>
+
+                                        <p>
+                                            Test, polish interactions and improve the final experience.
+                                        </p>
+                                    </div>
+
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                        <!-- BEYOND DESIGN -->
+
+                        <div class="about-panel" data-content="beyond-design">
+
+                            <span class="content-label">
+                                BEYOND DESIGN
+                            </span>
+
+                            <h3>
+                                A pencil, a blank sheet,
+                                <span>and a little imagination.</span>
+                            </h3>
+
+                            <p>
+                                When I'm not designing digital experiences,
+                                I love creating portrait sketches. It gives me
+                                a space to observe details, expressions and
+                                proportions through a different medium.
+                            </p>
+
+
+                            <!-- ARTWORK TICKER -->
+
+                            <div class="artwork-ticker">
+
+                                <div class="artwork-track">
+
+                                    <img src="assets/sketch-1.jpg" alt="Portrait sketch">
+
+                                    <img src="assets/sketch-2.jpg" alt="Portrait sketch">
+
+                                    <img src="assets/sketch-3.jpg" alt="Portrait sketch">
+
+                                    <img src="assets/sketch-4.jpg" alt="Portrait sketch">
+
+                                    <img src="assets/sketch-5.jpg" alt="Portrait sketch">
+
+
+                                    <!-- DUPLICATE IMAGES FOR LOOP -->
+
+                                    <img src="assets/sketch-1.jpg" alt="Portrait sketch">
+
+                                    <img src="assets/sketch-2.jpg" alt="Portrait sketch">
+
+                                    <img src="assets/sketch-3.jpg" alt="Portrait sketch">
+
+                                    <img src="assets/sketch-4.jpg" alt="Portrait sketch">
+
+                                    <img src="assets/sketch-5.jpg" alt="Portrait sketch">
+
+                                </div>
+
+                            </div>
+
+                        </div>
+
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+        <!-- =====================================================
+     TESTIMONIALS SECTION
+     ===================================================== -->
+
+        <section class="testimonials" id="testimonials">
+
+            <!-- SECTION LABEL -->
+            <div class="testimonials-label">
+                <span>CLIENT FEEDBACK</span>
+            </div>
+
+
+            <!-- SECTION INTRO -->
+            <div class="testimonials-intro">
+
+                <h2>
+                    What it's like to
+                    <span>work together.</span>
+                </h2>
+
+                <p>
+                    A few words from the people I've had the
+                    opportunity to work with.
+                </p>
+
+            </div>
+
+
+            <!-- TESTIMONIAL CARDS -->
+            <div class="testimonial-grid">
+
+
+                <!-- =================================================
+             TESTIMONIAL 01
+             ================================================= -->
+
+                <article class="testimonial-card">
+
+                    <div class="quote-mark">
+                        “
+                    </div>
+
+                    <div class="testimonial-rating" aria-label="5 out of 5 stars">
+                        <span>★</span>
+                        <span>★</span>
+                        <span>★</span>
+                        <span>★</span>
+                        <span>★</span>
+                    </div>
+
+
+                    <p class="testimonial-text">
+                        Working together was a smooth and positive
+                        experience. The website design was thoughtful,
+                        modern and aligned well with our requirements.
+                    </p>
+
+                    <div class="testimonial-client">
+
+                        <div class="client-line"></div>
+
+                        <div class="client-info">
+
+                            <strong>
+                                Auto Palace
+                            </strong>
+                        </div>
+
+                    </div>
+
+                </article>
+
+
+
+                <!-- =================================================
+             TESTIMONIAL 02
+             ================================================= -->
+
+                <article class="testimonial-card">
+
+                    <div class="quote-mark">
+                        “
+                    </div>
+
+                    <div class="testimonial-rating" aria-label="5 out of 5 stars">
+                        <span>★</span>
+                        <span>★</span>
+                        <span>★</span>
+                        <span>★</span>
+                        <span>★</span>
+                    </div>
+
+
+                    <p class="testimonial-text">
+                        The design captured the vision of the brand
+                        beautifully. Communication was clear and the
+                        final website felt clean and professional.
+                    </p>
+
+                    <div class="testimonial-client">
+
+                        <div class="client-line"></div>
+
+                        <div class="client-info">
+
+                            <strong>
+                                Ekdanta Homoeopathy & Cosmetology Clinic
+                            </strong>
+                        </div>
+
+                    </div>
+
+                </article>
+
+
+
+                <!-- =================================================
+             TESTIMONIAL 03
+             ================================================= -->
+
+                <article class="testimonial-card">
+
+                    <div class="quote-mark">
+                        “
+                    </div>
+
+                    <div class="testimonial-rating" aria-label="5 out of 5 stars">
+                        <span>★</span>
+                        <span>★</span>
+                        <span>★</span>
+                        <span>★</span>
+                        <span>★</span>
+                    </div>
+
+
+                    <p class="testimonial-text">
+                        The overall experience was creative and
+                        collaborative. The website came together
+                        beautifully and reflected the direction we
+                        wanted.
+                    </p>
+
+                    <div class="testimonial-client">
+
+                        <div class="client-line"></div>
+
+                        <div class="client-info">
+
+                            <strong>
+                                Passion Fitness
+                            </strong>
+                        </div>
+
+                    </div>
+
+                </article>
+
+            </div>
+
+        </section>
+
+        <!-- =====================================================
+     CONTACT SECTION
+     ===================================================== -->
+
+        <section class="contact" id="contact">
+
+
+            <!-- =================================================
+         BACKGROUND VIDEO
+         ================================================= -->
+
+            <video class="contact-video" id="contact-video" playsinline preload="auto">
+
+                <source src="assets/contact.mp4" type="video/mp4">
+
+                Your browser does not support video.
+
+            </video>
+
+
+            <!-- VIDEO OVERLAY -->
+
+            <div class="contact-overlay"></div>
+
+
+
+            <!-- =================================================
+         CONTACT CONTENT
+         ================================================= -->
+
+            <div class="contact-content">
+
+
+                <div class="contact-main-content">
+
+
+                    <!-- =================================================
+                 LEFT — TEXT + SOCIAL LINKS
+                 ================================================= -->
+
+                    <div class="contact-intro">
+
+                        <span class="contact-label">
+                            LET'S CONNECT
+                        </span>
+
+
+                        <h2>
+                            Have a project
+                            <span>in mind?</span>
+                        </h2>
+
+
+                        <p>
+                            Whether it's a website, a digital product,
+                            or something completely new —
+                            let's create it together.
+                        </p>
+
+
+
+                        <!-- SOCIAL LINKS -->
+
+                        <div class="contact-socials">
+
+
+                            <!-- LINKEDIN -->
+
+                            <a href="https://www.linkedin.com/in/sakshi-agarwal-6245343a4/" target="_blank"
+                                rel="noopener noreferrer" aria-label="LinkedIn" class="social-link">
+
+                                <i class='bx bxl-linkedin'></i>
+
+                            </a>
+
+
+
+                            <!-- INSTAGRAM -->
+
+                            <a href="https://www.instagram.com/" target="_blank" rel="noopener noreferrer"
+                                aria-label="Instagram" class="social-link">
+
+                                <i class='bx bxl-instagram'></i>
+
+                            </a>
+
+
+
+                            <!-- EMAIL -->
+
+                            <a href="https://mail.google.com/mail/?view=cm&fs=1&to=saku14agarwal@gmail.com"
+                                target="_blank" rel="noopener noreferrer">
+                                <i class="bx bx-envelope"></i>
+                            </a>
+
+                        </div>
+
+                    </div>
+
+
+
+                    <!-- =================================================
+                 RIGHT — CONTACT FORM
+                 ================================================= -->
+
+                    <div class="contact-form-wrapper">
+
+
+                        <div class="contact-form-heading">
+
+                            <h3>
+                                Send a message
+                            </h3>
+
+                            <p>
+                                Tell me a little about your idea
+                                and I'll get back to you.
+                            </p>
+
+                        </div>
+
+
+
+                        <form class="contact-form" id="contact-form" action="https://formspree.io/f/mkjgdgyz"
+                            method="POST">
+
+
+                            <!-- NAME -->
+
+                            <div class="form-group">
+
+                                <label for="name">
+                                    Name
+                                </label>
+
+                                <input type="text" id="name" name="name" placeholder="Your name" required>
+
+                            </div>
+
+
+
+                            <!-- EMAIL -->
+
+                            <div class="form-group">
+
+                                <label for="email">
+                                    Email
+                                </label>
+
+                                <input type="email" id="email" name="email" placeholder="you@example.com" required>
+
+                            </div>
+
+
+
+                            <!-- PROJECT -->
+
+                            <div class="form-group">
+
+                                <label for="project">
+                                    Project Type
+                                </label>
+
+                                <select id="project" name="project" required>
+
+                                    <option value="" disabled selected>
+                                        Select a project
+                                    </option>
+
+                                    <option value="uiux">
+                                        UI/UX Design
+                                    </option>
+
+                                    <option value="web-design">
+                                        Web Design
+                                    </option>
+
+                                    <option value="framer">
+                                        Framer Website
+                                    </option>
+
+                                    <option value="development">
+                                        Front-End Development
+                                    </option>
+
+                                    <option value="other">
+                                        Something else
+                                    </option>
+
+                                </select>
+
+                            </div>
+
+
+
+                            <!-- MESSAGE -->
+
+                            <div class="form-group">
+
+                                <label for="message">
+                                    Message
+                                </label>
+
+                                <textarea id="message" name="message" rows="4"
+                                    placeholder="Tell me about your project..." required></textarea>
+
+                            </div>
+
+
+
+                            <!-- SUBMIT -->
+
+                            <button type="submit" class="contact-submit">
+
+                                <span>
+                                    SEND MESSAGE
+                                </span>
+
+                                <span>
+                                    →
+                                </span>
+
+                            </button>
+
+
+
+                            <!-- FORM STATUS -->
+
+                            <p class="form-status" id="form-status"></p>
+
+
+                        </form><!-- FORM SUCCESS / ERROR POPUP -->
+
+                        <div class="form-toast" id="form-toast">
+
+                            <div class="toast-icon">
+                                ✓
+                            </div>
+
+                            <div class="toast-content">
+                                <strong id="toast-title">
+                                    Message sent!
+                                </strong>
+
+                                <p id="toast-message">
+                                    Thanks for reaching out. I'll get back to you soon.
+                                </p>
+                            </div>
+
+                            <button type="button" class="toast-close" id="toast-close" aria-label="Close notification">
+                                ×
+                            </button>
+
+                        </div>
+
+
+
+                    </div>
+
+                </div>
+
+
+
+                <!-- =================================================
+             BRAND FOOTER
+             ================================================= -->
+
+                <div class="contact-bottom">
+
+                    <span>
+                        Let's Design<span class="orange-dot">.Code</span>
+                    </span>
+
+                    <span>
+                        Design / Develop / Create
+                    </span>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- =================================================
+         FALLBACK PLAY BUTTON
+         ================================================= -->
+
+            <button class="contact-play" id="contact-play" type="button">
+                Play video →
+            </button>
+
+
+        </section>
+
+        <!-- =================================================
+        FOOTER
+        ================================================= -->
+
+        <footer class="footer" id="footer">
+
+            <div class="footer-scene">
+
+                <!-- BACKGROUND IMAGE -->
+
+                <img src="assets/footer-space.png" alt="" class="footer-space-image">
+
+
+                <!-- DECORATIVE ORBIT -->
+
+                <div class="footer-orbit footer-orbit-one"></div>
+                <div class="footer-orbit footer-orbit-two"></div>
+
+
+                <!-- MAIN BRAND -->
+
+                <div class="footer-brand">
+
+                    <h2>
+                        Let's Design<span>.Code</span>
+                    </h2>
+
+                    <p>
+                        Where ideas find their shape<br>
+                        and code brings them to life.
+                    </p>
+
+                </div>
+
+
+                <!-- DOODLE -->
+
+                <div class="footer-doodle footer-doodle-one">
+                    Ideas → Design → Code
+                </div>
+
+                <div class="footer-doodle footer-doodle-two">
+                    Make something meaningful.
+                </div>
+
+
+                <!-- SOCIAL LINKS -->
+
+                <div class="footer-links">
+
+                    <span class="footer-links-label">
+                        LET'S CONNECT
+                    </span>
+
+                    <div class="footer-socials">
+                        <!-- LINKEDIN -->
+
+                        <a href="https://www.linkedin.com/in/sakshi-agarwal-6245343a4/" target="_blank"
+                            rel="noopener noreferrer" aria-label="LinkedIn" class="social-link">
+
+                            <i class='bx bxl-linkedin'></i>
+
+                        </a>
+
+
+
+                        <!-- INSTAGRAM -->
+
+                        <a href="https://www.instagram.com/" target="_blank" rel="noopener noreferrer"
+                            aria-label="Instagram" class="social-link">
+
+                            <i class='bx bxl-instagram'></i>
+
+                        </a>
+
+
+
+                        <!-- EMAIL -->
+
+                        <a href="https://mail.google.com/mail/?view=cm&fs=1&to=saku14agarwal@gmail.com" target="_blank"
+                            rel="noopener noreferrer">
+                            <i class="bx bx-envelope"></i>
+                        </a>
+                    </div>
+
+                </div>
+
+
+                <!-- BACK TO TOP -->
+
+                <a href="#" class="footer-top-button" id="backToTop">
+
+                    <strong>↑</strong>
+
+                </a>
+
+
+                <!-- FOOTER ROLE -->
+
+                <div class="footer-role">
+                    UI/UX DESIGNER <span>·</span> DEVELOPER
+                </div>
+
+
+                <!-- BOTTOM -->
+
+                <div class="footer-bottom">
+
+                    <span>© 2026 Sakshi Agarwal</span>
+
+                    <span>BUILT WITH INTENT.</span>
+
+                </div>
+
+            </div>
+
+        </footer>
+
+
+        <script src="js/portfolio.js"></script>
+        <script src="js/about.js"></script>
+</body>
+
+</html>

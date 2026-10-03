@@ -1,0 +1,364 @@
+/* =====================================================
+   SERVICES
+   ===================================================== */
+
+.services {
+    width: 100%;
+    padding: 80px 20px 20px 20px;
+    background: var(--bg-color);
+}
+
+
+/* SERVICES INTRO */
+
+.services-heading {
+    margin-bottom: 50px;
+}
+
+.services-heading h2 {
+    margin: 0;
+    font-size: 38px;
+    line-height: 1.05;
+    font-weight: 600;
+    color: var(--text-color);
+}
+
+.services-heading h2 span {
+    color: var(--main-color);
+}
+
+.services-heading p {
+    max-width: 520px;
+    margin-top: 20px;
+    margin-bottom: 0;
+    font-size: 14px;
+    line-height: 1.7;
+    color: #a9a7b8;
+}
+
+
+/* SERVICES GRID */
+
+.services-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 15px;
+}
+
+
+/* SERVICE CARD */
+
+.service-card {
+    position: relative;
+    min-height: 380px;
+    padding: 25px;
+    overflow: hidden;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    background: var(--second-bg-color);
+    border: 1px solid rgba(255, 255, 255, 0.10);
+    border-radius: 22px;
+
+    transition:
+        transform 0.35s ease,
+        border-color 0.35s ease;
+}
+
+
+/* TOP */
+
+.service-top {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.service-number {
+    font-size: 18px;
+    font-weight: 600;
+    color: var(--main-color);
+}
+
+.service-identity {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.service-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 40px;
+    height: 40px;
+
+    border: 1px solid rgba(234, 88, 12, 0.35);
+    border-radius: 50%;
+
+    color: var(--main-color);
+    font-size: 20px;
+
+    transition:
+        background 0.3s ease,
+        transform 0.3s ease;
+}
+
+.service-card:hover .service-icon {
+    background: rgba(234, 88, 12, 0.10);
+    transform: rotate(8deg);
+}
+
+.service-arrow {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 34px;
+    height: 34px;
+
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    border-radius: 50%;
+
+    font-size: 16px;
+    color: var(--text-color);
+
+    transition:
+        background 0.3s ease,
+        color 0.3s ease,
+        transform 0.3s ease;
+}
+
+
+/* CONTENT */
+
+.service-content {
+    margin-top: 30px;
+}
+
+.service-content h3 {
+    margin: 0 0 14px;
+
+    font-size: 27px;
+    line-height: 1.15;
+    font-weight: 600;
+
+    color: var(--text-color);
+}
+
+.service-content p {
+    max-width: 450px;
+
+    margin: 0;
+
+    font-size: 13px;
+    line-height: 1.7;
+
+    color: #a9a7b8;
+}
+
+
+/* TAGS */
+
+.service-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 7px;
+
+    margin-top: 30px;
+}
+
+.service-tags span {
+    padding: 6px 10px;
+
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    border-radius: 50px;
+
+    background: rgba(255, 255, 255, 0.03);
+
+    font-size: 10px;
+    color: #b9b7c2;
+}
+
+
+/* HOVER */
+
+.service-card:hover {
+    transform: translateY(-5px);
+    border-color: rgba(234, 88, 12, 0.45);
+}
+
+.service-card:hover .service-arrow {
+    background: var(--main-color);
+    color: #ffffff;
+    transform: rotate(45deg);
+}
+
+
+/* SERVICES STATEMENT */
+
+.services-statement {
+    margin-top: 70px;
+    padding: 30px 0;
+
+    border-top: 1px solid rgba(255, 255, 255, 0.10);
+}
+
+.services-statement > p {
+    max-width: 650px;
+
+    margin: 0;
+
+    font-size: 24px;
+    line-height: 1.3;
+    font-weight: 500;
+
+    color: var(--text-color);
+}
+
+.services-statement > p span {
+    color: var(--main-color);
+}
+
+
+/* DESIGN → DEVELOPMENT */
+
+.design-code-line {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+
+    margin-top: 25px;
+
+    font-size: 10px;
+    font-weight: 600;
+    letter-spacing: 1.5px;
+
+    color: #777787;
+}
+
+.connection-line {
+    width: 70px;
+    height: 1px;
+    background: var(--main-color);
+}
+
+
+/* =====================================================
+   TABLET — 768px+
+   ===================================================== */
+
+@media (min-width: 768px) {
+
+    .services {
+        padding: 100px 50px;
+    }
+
+    .services-heading {
+        margin-bottom: 65px;
+    }
+
+    .services-heading h2 {
+        font-size: 52px;
+    }
+
+    .services-heading p {
+        font-size: 15px;
+    }
+
+    .services-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 18px;
+    }
+
+    .service-card {
+        min-height: 400px;
+        padding: 28px;
+    }
+
+    .service-card:nth-child(3) {
+        grid-column: 1 / -1;
+    }
+
+    .service-content h3 {
+        font-size: 30px;
+    }
+
+    .services-statement {
+        margin-top: 90px;
+    }
+
+    .services-statement > p {
+        font-size: 30px;
+    }
+}
+
+
+/* =====================================================
+   DESKTOP — 1024px+
+   ===================================================== */
+
+@media (min-width: 1024px) {
+
+    .services {
+        padding: 130px 50px 0px 80px;
+    }
+
+    .services-heading {
+        max-width: 850px;
+        margin-bottom: 80px;
+    }
+
+    .services-heading h2 {
+        font-size: 68px;
+        line-height: 1;
+    }
+
+    .services-heading p {
+        max-width: 600px;
+        margin-top: 25px;
+        font-size: 16px;
+    }
+
+    .services-grid {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 14px;
+    }
+
+    .service-card:nth-child(3) {
+        grid-column: auto;
+    }
+
+    .service-card {
+        min-height: 430px;
+        padding: 30px;
+    }
+
+    .service-content {
+        margin-top: 40px;
+    }
+
+    .service-content h3 {
+        font-size: 28px;
+    }
+
+    .service-content p {
+        font-size: 14px;
+    }
+
+    .services-statement {
+        margin-top: 110px;
+        padding: 40px 0;
+    }
+
+    .services-statement > p {
+        font-size: 38px;
+    }
+
+    .connection-line {
+        width: 100px;
+    }
+}

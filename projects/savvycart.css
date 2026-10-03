@@ -1,0 +1,906 @@
+@import url('https://fonts.googleapis.com/css2?family=Ancizar+Serif:ital,wght@0,300..900;1,300..900&display=swap');
+
+:root {
+    --bg-color: #080808;
+    --second-bg-color: #131313;
+    --text-color: #f7f0f0;
+    --main-color: #ea580c;
+}
+
+
+/* =========================
+   BASE
+========================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background: var(--bg-color);
+    color: var(--text-color);
+    font-family: "Ancizar Serif", serif;
+}
+
+.case-study {
+    min-height: 100vh;
+    background: var(--bg-color);
+    color: var(--text-color);
+    overflow-x: hidden;
+}
+
+/* =====================================================
+   SAVVYCART CASE STUDY
+   Mobile First
+   Tablet: 768px
+   Desktop: 1024px
+===================================================== */
+
+
+/* =========================
+   BASE
+========================= */
+
+.case-study {
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+
+    background: var(--bg-color);
+    color: var(--text-color);
+
+    font-family: "Ancizar Serif", serif;
+
+    overflow-x: hidden;
+}
+
+.case-study *,
+.case-study *::before,
+.case-study *::after {
+    box-sizing: border-box;
+}
+
+.case-study img {
+    display: block;
+    max-width: 100%;
+}
+
+.case-study a {
+    text-decoration: none;
+}
+
+
+/* =========================
+   NAVBAR
+========================= */
+
+.case-nav {
+    width: 100%;
+    padding: 1rem 1.2rem;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+
+    background: rgba(8, 8, 8, 0.94);
+    backdrop-filter: blur(12px);
+
+    border-bottom: 1px solid #292929;
+}
+
+.case-logo {
+    color: var(--text-color);
+    font-size: 1rem;
+    font-weight: 700;
+}
+
+.case-logo span {
+    color: var(--main-color);
+}
+
+.back-link {
+    color: #999;
+    font-size: 0.75rem;
+
+    transition: color 0.3s ease;
+}
+
+.back-link:hover {
+    color: var(--main-color);
+}
+
+
+/* =========================
+   CONTAINER
+========================= */
+
+.case-container {
+    width: 100%;
+    max-width: 1200px;
+
+    margin: 0 auto;
+    padding: 0 1.2rem;
+}
+
+
+/* =========================
+   HERO
+========================= */
+
+.case-hero {
+    min-height: 90vh;
+    padding: 5rem 0;
+
+    display: flex;
+    align-items: center;
+}
+
+.case-label,
+.small-label {
+    display: block;
+
+    margin-bottom: 1rem;
+
+    color: var(--main-color);
+
+    font-size: 0.7rem;
+    font-weight: 600;
+
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+}
+
+.case-hero h1 {
+    margin: 0;
+
+    font-size: clamp(4rem, 16vw, 8rem);
+    line-height: 0.85;
+
+    font-weight: 700;
+}
+
+.case-hero h1 span,
+.case-section h2 span,
+.next-project h2 span {
+    color: var(--main-color);
+}
+
+.case-hero p {
+    max-width: 620px;
+
+    margin-top: 1.8rem;
+
+    color: #999;
+
+    font-size: 0.9rem;
+    line-height: 1.8;
+}
+
+
+/* =========================
+   HERO META
+========================= */
+
+.hero-meta {
+    margin-top: 3rem;
+
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+}
+
+.hero-meta div {
+    padding-top: 0.8rem;
+
+    border-top: 1px solid #292929;
+}
+
+.hero-meta span {
+    display: block;
+
+    margin-bottom: 0.3rem;
+
+    color: #666;
+
+    font-size: 0.6rem;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+}
+
+.hero-meta strong {
+    color: var(--text-color);
+
+    font-size: 0.8rem;
+    font-weight: 600;
+}
+
+
+/* =========================
+   IMAGE SECTIONS
+========================= */
+
+.case-image-section {
+    padding: 2rem 0 5rem;
+}
+
+.large-image {
+    width: 100;
+
+    overflow: hidden;
+
+    background: var(--second-bg-color);
+
+    border: 1px solid #292929;
+    border-radius: 0.8rem;
+}
+
+.large-image img {
+    width: 100%;
+    height: auto;
+    
+    
+}
+
+
+/* =========================
+   GENERAL SECTION
+========================= */
+
+.case-section {
+    padding: 5rem 0;
+}
+
+.dark-section {
+    background: var(--second-bg-color);
+}
+
+.section-number {
+    display: block;
+
+    margin-bottom: 0.8rem;
+
+    color: var(--main-color);
+
+    font-size: 0.7rem;
+    font-weight: 600;
+
+    letter-spacing: 0.1em;
+}
+
+.case-section h2 {
+    max-width: 850px;
+
+    margin: 0 0 1.2rem;
+
+    font-size: clamp(2.3rem, 9vw, 5rem);
+    line-height: 0.95;
+
+    font-weight: 700;
+}
+
+.section-intro {
+    max-width: 700px;
+
+    color: #999;
+
+    font-size: 0.9rem;
+    line-height: 1.8;
+}
+
+
+/* =========================
+   OVERVIEW
+========================= */
+
+.overview-grid {
+    margin-top: 2.5rem;
+
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0.8rem;
+}
+
+.overview-card {
+    padding: 1.2rem;
+
+    background: var(--second-bg-color);
+
+    border: 1px solid #292929;
+    border-radius: 0.6rem;
+}
+
+.overview-card span {
+    display: block;
+
+    margin-bottom: 0.4rem;
+
+    color: #666;
+
+    font-size: 0.6rem;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+}
+
+.overview-card h3 {
+    margin: 0;
+
+    color: var(--text-color);
+
+    font-size: 0.85rem;
+}
+
+
+/* =========================
+   TWO COLUMN
+========================= */
+
+.two-column {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.two-column>div:first-child {
+    flex: 1;
+}
+
+.info-box {
+    padding: 1.5rem;
+
+    background: var(--second-bg-color);
+
+    border: 1px solid #292929;
+    border-radius: 0.7rem;
+}
+
+.info-box ul {
+    margin: 0;
+    padding-left: 1rem;
+}
+
+.info-box li {
+    margin-bottom: 0.6rem;
+
+    color: #999;
+
+    font-size: 0.8rem;
+    line-height: 1.5;
+}
+
+
+/* =========================
+   PROBLEM
+========================= */
+
+.problem-grid {
+    margin-top: 2.5rem;
+
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 0.8rem;
+}
+
+.problem-card {
+    padding: 1.3rem;
+
+    border: 1px solid #292929;
+    border-radius: 0.7rem;
+}
+
+.problem-card span,
+.solution-item span,
+.analysis-card span,
+.learning-item span {
+    display: block;
+
+    margin-bottom: 0.8rem;
+
+    color: var(--main-color);
+
+    font-size: 0.7rem;
+}
+
+.problem-card h3,
+.solution-item h3,
+.analysis-card h3,
+.learning-item h3 {
+    margin: 0 0 0.5rem;
+
+    font-size: 1rem;
+}
+
+.problem-card p,
+.solution-item p,
+.analysis-card p,
+.learning-item p {
+    margin: 0;
+
+    color: #999;
+
+    font-size: 0.78rem;
+    line-height: 1.7;
+}
+
+
+/* =========================
+   SOLUTION
+========================= */
+
+.solution-grid {
+    margin-top: 2.5rem;
+
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+}
+
+.solution-item {
+    padding-top: 1rem;
+
+    border-top: 1px solid #292929;
+}
+
+
+/* =========================
+   IMAGE GRID
+========================= */
+
+.image-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1rem;
+}
+
+.image-grid img {
+    width: 100%;
+
+    border: 1px solid #292929;
+    border-radius: 0.7rem;
+}
+
+
+/* =========================
+   ANALYSIS
+========================= */
+
+.analysis-grid {
+    margin-top: 2.5rem;
+
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1rem;
+}
+
+.analysis-card {
+    padding: 1.4rem;
+
+    background: var(--second-bg-color);
+
+    border: 1px solid #292929;
+    border-radius: 0.7rem;
+}
+
+
+/* =========================
+   FLOW
+========================= */
+
+.flow,
+.journey {
+    margin-top: 2.5rem;
+
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.flow div,
+.journey div {
+    padding: 0.7rem 0.9rem;
+
+    background: var(--second-bg-color);
+
+    border: 1px solid #292929;
+    border-radius: 0.4rem;
+
+    color: var(--text-color);
+
+    font-size: 0.7rem;
+}
+
+.flow span,
+.journey span {
+    color: var(--main-color);
+}
+
+
+/* =========================
+   CASE LIST
+========================= */
+
+.case-list {
+    margin-top: 2rem;
+    padding-left: 1.1rem;
+}
+
+.case-list li {
+    margin-bottom: 0.7rem;
+
+    color: #999;
+
+    font-size: 0.8rem;
+    line-height: 1.6;
+}
+
+
+/* =========================
+   FINAL UI
+========================= */
+
+.final-ui-grid {
+    margin-top: 2.5rem;
+
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1rem;
+}
+
+.final-ui-card {
+    overflow: hidden;
+
+    background: #0d0d0d;
+
+    border: 1px solid #292929;
+    border-radius: 0.7rem;
+}
+
+.final-ui-card img {
+    width: 100%;
+}
+
+.final-ui-card h3 {
+    padding: 0.9rem;
+
+    margin: 0;
+
+    font-size: 0.85rem;
+}
+
+
+/* =========================
+   DESIGN SYSTEM
+========================= */
+
+.design-system {
+    margin-top: 2.5rem;
+    padding: 1.3rem;
+
+    background: var(--second-bg-color);
+
+    border: 1px solid #292929;
+    border-radius: 0.7rem;
+}
+
+.color-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0.7rem;
+}
+
+.color-item {
+    height: 90px;
+
+    padding: 0.7rem;
+
+    display: flex;
+    align-items: flex-end;
+
+    border-radius: 0.5rem;
+}
+
+.color-item span {
+    font-family: Arial, sans-serif;
+    font-size: 0.65rem;
+}
+
+.orange {
+    background: #ff7a00;
+}
+
+.navy {
+    background: #1f3c88;
+}
+
+.light {
+    background: #f6f7fb;
+    color: #333;
+}
+
+.white {
+    background: #ffffff;
+    color: #333;
+}
+
+.green {
+    background: #27ae60;
+}
+
+.red {
+    background: #eb5757;
+}
+
+.design-text {
+    margin-top: 1.5rem;
+}
+
+.design-text p {
+    margin-bottom: 0.7rem;
+
+    color: #999;
+
+    font-size: 0.8rem;
+    line-height: 1.6;
+}
+
+
+/* =========================
+   PROTOTYPE
+========================= */
+
+.prototype-box {
+    margin-top: 2.5rem;
+    padding: 2rem 1.2rem;
+
+    text-align: center;
+
+    background: #0d0d0d;
+
+    border: 1px solid #292929;
+    border-radius: 0.7rem;
+}
+
+.prototype-box p {
+    max-width: 600px;
+
+    margin: 0 auto 1.5rem;
+
+    color: #999;
+
+    font-size: 0.85rem;
+    line-height: 1.7;
+}
+
+.prototype-btn {
+    display: inline-flex;
+
+    padding: 0.8rem 1.2rem;
+
+    background: var(--main-color);
+    color: #fff;
+
+    border-radius: 0.4rem;
+
+    font-size: 0.75rem;
+
+    transition: transform 0.3s ease;
+}
+
+.prototype-btn:hover {
+    transform: translateY(-2px);
+}
+
+
+/* =========================
+   LEARNINGS
+========================= */
+
+.learning-grid {
+    margin-top: 2.5rem;
+
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1rem;
+}
+
+.learning-item {
+    padding: 1.3rem;
+
+    background: var(--second-bg-color);
+
+    border-left: 2px solid var(--main-color);
+}
+
+
+/* =========================
+   NEXT PROJECT
+========================= */
+
+.next-project {
+    padding: 5rem 0;
+
+    border-top: 1px solid #292929;
+}
+
+.next-project h2 {
+    margin: 0;
+
+    font-size: clamp(3rem, 12vw, 7rem);
+    line-height: 0.9;
+
+    transition: color 0.3s ease;
+}
+
+.next-project a:hover h2 {
+    color: var(--main-color);
+}
+
+
+/* =========================
+   FOOTER
+========================= */
+
+.case-footer {
+    padding: 2rem 1.2rem;
+
+    border-top: 1px solid #292929;
+
+    text-align: center;
+}
+
+.case-footer p {
+    margin: 0;
+
+    color: #666;
+
+    font-size: 0.7rem;
+}
+
+
+/* =====================================================
+   TABLET — 768px
+===================================================== */
+
+@media (min-width: 768px) {
+
+    .case-nav {
+        padding: 1.2rem 3rem;
+    }
+
+    .case-container {
+        padding: 0 3rem;
+    }
+
+    .case-hero {
+        min-height: 85vh;
+        padding: 6rem 0;
+    }
+
+    .case-section {
+        padding: 7rem 0;
+    }
+
+    .hero-meta {
+        grid-template-columns: 1fr 1fr;
+        gap: 1.5rem;
+    }
+
+    .two-column {
+        flex-direction: row;
+        align-items: start;
+        gap: 4rem;
+    }
+
+    .two-column>div:first-child {
+        width: 55%;
+    }
+
+    .info-box {
+        width: 45%;
+    }
+
+    .problem-grid {
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+
+    .analysis-grid {
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+
+    .final-ui-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .learning-grid {
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+
+    .image-grid.two-images {
+        grid-template-columns: 1fr 1fr;
+    }
+
+}
+
+
+/* =====================================================
+   DESKTOP — 1024px
+===================================================== */
+
+@media (min-width: 1024px) {
+
+    .case-nav {
+        padding: 1.2rem 5rem;
+    }
+
+    .case-container {
+        padding: 0 2rem;
+    }
+
+    .case-hero {
+        min-height: 90vh;
+        padding: 7rem 0;
+    }
+
+    .case-section {
+        padding: 8rem 0;
+    }
+
+    .hero-meta {
+        width: 800px;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+    }
+
+    .overview-grid {
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+    }
+
+    .solution-grid {
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        gap: 1.5rem;
+    }
+
+    .image-grid {
+        grid-template-columns: 1fr;
+        gap: 0;
+        padding: 0 5rem;
+    }
+
+    .image-grid img {
+        width: 50%;
+
+        border: 1px solid #292929;
+        border-radius: 0.7rem;
+    }
+
+    .final-ui-grid {
+        grid-template-columns: 1fr 1fr 1fr;
+        gap: 1.5rem;
+    }
+
+    .color-grid {
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+
+    .design-system {
+        padding: 2rem;
+    }
+
+    .prototype-box {
+        padding: 4rem 2rem;
+    }
+
+    .next-project {
+        padding: 8rem 0;
+    }
+
+}
