@@ -9,12 +9,30 @@
     scroll-behavior: smooth;
 }
 
+
 :root {
-    --bg-color: #080808;
-    --second-bg-color: #131313;
-    --text-color: #f7f0f0;
-    --main-color: #ea580c;
+    /* Main backgrounds */
+    --bg-color: #030611;
+    --second-bg-color: #101A30;
+
+    /* Text */
+    --text-color: #EAF1FF;
+
+    /* Primary accent */
+    --main-color: #287BFF;
+
+    /* Extended Electric Blue palette */
+    --electric-blue: #287BFF;
+    --electric-cyan: #43D9FF;
+    --deep-navy: #101A30;
+    --midnight: #030611;
+    --soft-white: #EAF1FF;
+    --muted-text: #9AAAC5;
+    --border-color: rgba(67, 217, 255, 0.18);
+    --glow-color: rgba(40, 123, 255, 0.35);
+    --cyan-glow: rgba(67, 217, 255, 0.20);
 }
+
 
 body {
     background-color: var(--bg-color);
@@ -23,84 +41,181 @@ body {
     width: 100%;
 }
 
-/* ---------------- PRELOADER ---------------- */
-#preloader {
-    position: fixed;
-    inset: 0;
-    background: var(--bg-color);
-    z-index: 1000;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    gap: 2rem;
-    padding: 1rem;
+
+/* ==========================================
+   PRELOADER RESPONSIVE MEDIA QUERIES
+   ========================================== */
+
+/* Tablets and smaller laptops */
+@media (max-width: 1024px) {
+    #preloader {
+        gap: 1.5rem;
+        padding: 95px 2rem 2rem;
+    }
+
+    .logo-img {
+        width: 190px;
+        top: 20px;
+        left: 20px;
+    }
+
+    .robot-stage {
+        width: min(90%, 700px);
+    }
+
+    .preloader-controls {
+        width: min(80%, 320px);
+    }
 }
 
-.eye-tracker {
-    display: flex;
-    gap: 1.2rem;
+/* Mobile landscape and small tablets */
+@media (max-width: 768px) {
+    #preloader {
+        gap: 1.25rem;
+        padding: 85px 1.25rem 1.5rem;
+    }
+
+    .logo-img {
+        width: 155px;
+        top: 16px;
+        left: 16px;
+    }
+
+    .eye-tracker {
+        gap: 0.75rem;
+    }
+
+    .eye {
+        width: 42px;
+    }
+
+    .robot-stage {
+        width: 100%;
+        max-width: 600px;
+    }
+
+    .robot-greeting {
+        top: 8%;
+        right: 7%;
+        padding: 0.4rem 0.75rem;
+        font-size: 1rem;
+    }
+
+    .preloader-controls {
+        width: min(100%, 290px);
+        gap: 0.75rem;
+    }
+
+    .progress-text {
+        font-size: 0.9rem;
+    }
+
+    .start-btn {
+        min-height: 46px;
+        padding: 0.7rem 1.4rem;
+        font-size: 1rem;
+    }
 }
 
-.eye {
-    width: 60px;
-    height: 60px;
-    background: #fff;
-    border-radius: 50%;
-    position: relative;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+/* Small mobile phones */
+@media (max-width: 480px) {
+    #preloader {
+        gap: 1rem;
+        padding: 78px 1rem 1.25rem;
+    }
+
+    .logo-img {
+        width: 125px;
+        top: 14px;
+        left: 14px;
+    }
+
+    .eye {
+        width: 34px;
+    }
+
+    .pupil {
+        width: 32%;
+    }
+
+    .robot-stage {
+        width: 100%;
+        border-radius: 10px;
+    }
+
+    .robot-greeting {
+        top: 6%;
+        right: 5%;
+        padding: 0.3rem 0.6rem;
+        font-size: 0.85rem;
+    }
+
+    .preloader-controls {
+        width: 100%;
+        max-width: 270px;
+    }
+
+    .progress-box {
+        height: 6px;
+    }
+
+    .start-btn {
+        width: auto;
+        max-width: 100%;
+        min-height: 44px;
+        padding: 0.7rem 1.25rem;
+        font-size: 0.95rem;
+    }
 }
 
-.pupil {
-    width: 25px;
-    height: 25px;
-    background: var(--bg-color);
-    border-radius: 50%;
-    position: absolute;
+/* Very short screens, including landscape phones */
+@media (max-height: 600px) {
+    #preloader {
+        gap: 0.65rem;
+        padding: 65px 1rem 0.75rem;
+    }
+
+    .logo-img {
+        width: 110px;
+        top: 10px;
+        left: 12px;
+    }
+
+    .eye {
+        width: 30px;
+    }
+
+    .robot-stage {
+        width: min(70vw, 480px);
+        max-height: 38vh;
+    }
+
+    .preloader-controls {
+        gap: 0.45rem;
+        width: min(80%, 260px);
+    }
+
+    .progress-text {
+        min-height: auto;
+        font-size: 0.8rem;
+    }
+
+    .start-btn {
+        min-height: 38px;
+        padding: 0.5rem 1.1rem;
+        font-size: 0.9rem;
+    }
 }
 
-.logo-img{
-    width: 500px;
-    height: auto;
-    position: absolute;
-    top: 20px;
-    left: 20px;
+/* Accessibility: reduce decorative motion */
+@media (prefers-reduced-motion: reduce) {
+    .start-btn,
+    .progress-bar,
+    .robot-greeting {
+        transition: none;
+    }
 }
 
-.progress-box {
-    width: 80%;
-    max-width: 260px;
-    height: 8px;
-    background: var(--second-bg-color);
-    border-radius: 10px;
-    overflow: hidden;
-}
-
-.progress-bar {
-    width: 0%;
-    height: 100%;
-    background: var(--main-color);
-    transition: width 0.1s linear;
-}
-
-.progress-text {
-    font-size: 1.2rem;
-    color: #94a3b8;
-}
-
-.start-btn {
-    padding: 0.8rem 2rem;
-    background: var(--main-color);
-    color: var(--second-bg-color);
-    border: none;
-    border-radius: 3rem;
-    font-size: 1.4rem;
-    font-weight: 600;
-    cursor: pointer;
-    box-shadow: 0 0 15px var(--main-color);
-}
 
 /* ---------------- INTRO VIDEO ---------------- */
 #videoContainer {
@@ -244,13 +359,7 @@ section {
 
 /* RESPONSIVE MEDIA QUERIES */
 @media (max-width: 1024px) {
-    
-    .logo-img{
-    width: 300px;
-    height: auto;
-    position: static;
-    
-}
+
 
     .menu-icon {
         display: block;
