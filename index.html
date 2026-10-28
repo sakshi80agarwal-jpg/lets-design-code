@@ -43,25 +43,54 @@
 </head>
 
 <body>
-    <!-- PRELOADER -->
-    <div id="preloader">
-        <div class="eye-tracker">
-            <div class="eye">
-                <div class="pupil"></div>
-            </div>
-            <div class="eye">
-                <div class="pupil"></div>
-            </div>
-        </div>
-        <img class="logo-img" src="assets/logo.png" alt="logo">
-        <div class="progress-box">
+    
+<!-- PRELOADER -->
+<div id="preloader">
+    <img class="logo-img" src="assets/logo.png" alt="Let's Design.Code logo">
+
+    <!-- Independent cursor-following eyes -->
+    <div class="eye-tracker" aria-hidden="true">
+        <div class="eye"><div class="pupil"></div></div>
+        <div class="eye"><div class="pupil"></div></div>
+    </div>
+
+    <!-- Robot video: separate from the floating eyes -->
+    <div class="robot-stage">
+        <video
+            id="preloaderRobot"
+            class="robot-video"
+            src="assets/preloader-robot.mp4"
+            playsinline
+            muted
+            preload="auto"
+            aria-label="Robot welcoming visitors">
+        </video>
+        <span class="robot-greeting" id="robotGreeting">Hi!</span>
+    </div>
+
+    <div class="preloader-controls">
+        <div
+            class="progress-box"
+            role="progressbar"
+            aria-label="Loading progress"
+            aria-valuemin="0"
+            aria-valuemax="100"
+            aria-valuenow="0"
+            id="progressTrack">
             <div class="progress-bar" id="progressBar"></div>
         </div>
-        <span class="progress-text" id="progressText">Click Start to Load</span>
+
+        <span class="progress-text" id="progressText">
+            Ready when you are
+        </span>
+
         <button class="start-btn" id="startBtn" onclick="startLoading()">
-            <i class='bx bx-play'></i> Start Experience
+            <i class="bx bx-play"></i>
+            Start Experience
         </button>
     </div>
+</div>
+
 
     <!-- INTRO VIDEO OVERLAY -->
     <div id="videoContainer">
