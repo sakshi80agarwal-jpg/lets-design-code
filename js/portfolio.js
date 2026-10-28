@@ -21,29 +21,79 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 });
 
-// 2. PRELOADER START LOGIC
+
+let preloaderStarted = false;
+
 function startLoading() {
-  const startBtn = document.getElementById('startBtn');
-  const progressBar = document.getElementById('progressBar');
-  const progressText = document.getElementById('progressText');
+    if (preloaderStarted) return;
 
-  if (!startBtn || !progressBar || !progressText) return;
+    const preloader = document.getElementById("preloader");
+    const robot = document.getElementById("preloaderRobot");
+    const startBtn = document.getElementById("startBtn");
+    const progressBar = document.getElementById("progressBar");
+    const progressText = document.getElementById("progressText");
+    const progressTrack = document.getElementById("progressTrack");
 
-  startBtn.style.display = 'none';
-  let progress = 0;
-
-  const interval = setInterval(() => {
-    progress += 2;
-    progressBar.style.width = progress + '%';
-    progressText.innerText = `Loading ${progress}%`;
-
-    if (progress >= 100) {
-      clearInterval(interval);
-      const preloader = document.getElementById('preloader');
-      if (preloader) preloader.style.display = 'none';
-      playIntroVideo();
+    if (!preloader || !robot || !startBtn || !progressBar || !progressText) {
+        console.error("Preloader elements are missing.");
+        return;
     }
-  }, 30);
+
+    preloaderStarted = true;
+    preloader.classList.add("is-running");
+    startBtn.disabled = true;
+
+    const loadingDuration = 5000;
+    const robotDuration = 7700;
+    const startTime = performance.now();
+
+    progressBar.style.width = "0%";
+    progressText.textContent = "Loading 0%";
+
+    if (progressTrack) {
+        progressTrack.setAttribute("aria-valuenow", "0");
+    }
+
+    robot.currentTime = 0;
+
+    const robotPlayback = robot.play();
+
+    if (robotPlayback && typeof robotPlayback.catch === "function") {
+        robotPlayback.catch(error => {
+            console.warn("Robot video could not play:", error);
+        });
+    }
+
+    function updateProgress(now) {
+        const elapsed = now - startTime;
+        const progress = Math.min(100, (elapsed / loadingDuration) * 100);
+        const roundedProgress = Math.floor(progress);
+
+        progressBar.style.width = `${progress}%`;
+        progressText.textContent = `Loading ${roundedProgress}%`;
+
+        if (progressTrack) {
+            progressTrack.setAttribute(
+                "aria-valuenow",
+                String(roundedProgress)
+            );
+        }
+
+        if (elapsed < loadingDuration) {
+            requestAnimationFrame(updateProgress);
+        } else {
+            progressBar.style.width = "100%";
+            progressText.textContent = "Almost there — say hi!";
+        }
+    }
+
+    requestAnimationFrame(updateProgress);
+
+    window.setTimeout(() => {
+        robot.pause();
+        preloader.style.display = "none";
+        playIntroVideo();
+    }, robotDuration);
 }
 
 // 3. INTRO VIDEO LOGIC (STOPS AUDIO IMMEDIATELY ON SKIP)
