@@ -25,75 +25,77 @@ document.addEventListener('DOMContentLoaded', () => {
 let preloaderStarted = false;
 
 function startLoading() {
-    if (preloaderStarted) return;
+  if (preloaderStarted) return;
 
-    const preloader = document.getElementById("preloader");
-    const robot = document.getElementById("preloaderRobot");
-    const startBtn = document.getElementById("startBtn");
-    const progressBar = document.getElementById("progressBar");
-    const progressText = document.getElementById("progressText");
-    const progressTrack = document.getElementById("progressTrack");
+  const preloader = document.getElementById("preloader");
+  const robot = document.getElementById("preloaderRobot");
+  const startBtn = document.getElementById("startBtn");
+  const progressBar = document.getElementById("progressBar");
+  const progressText = document.getElementById("progressText");
+  const progressTrack = document.getElementById("progressTrack");
 
-    if (!preloader || !robot || !startBtn || !progressBar || !progressText) {
-        console.error("Preloader elements are missing.");
-        return;
-    }
+  if (!preloader || !robot || !startBtn || !progressBar || !progressText) {
+    console.error("Preloader elements are missing.");
+    return;
+  }
 
-    preloaderStarted = true;
-    preloader.classList.add("is-running");
-    startBtn.disabled = true;
+  preloaderStarted = true;
+  preloader.classList.add("is-running");
+  startBtn.disabled = true;
 
-    const loadingDuration = 5000;
-    const robotDuration = 7700;
-    const startTime = performance.now();
+  const loadingDuration = 5000;
+  const robotDuration = 7700;
+  const startTime = performance.now();
 
-    progressBar.style.width = "0%";
-    progressText.textContent = "Loading 0%";
+  progressBar.style.width = "0%";
+  progressText.textContent = "Loading 0%";
+
+  if (progressTrack) {
+    progressTrack.setAttribute("aria-valuenow", "0");
+  }
+
+  robot.currentTime = 0;
+
+  robot.muted = false;
+  robot.volume = 1;
+  const robotPlayback = robot.play();
+
+  if (robotPlayback && typeof robotPlayback.catch === "function") {
+    robotPlayback.catch(error => {
+      console.warn("Robot video could not play:", error);
+    });
+  }
+
+  function updateProgress(now) {
+    const elapsed = now - startTime;
+    const progress = Math.min(100, (elapsed / loadingDuration) * 100);
+    const roundedProgress = Math.floor(progress);
+
+    progressBar.style.width = `${progress}%`;
+    progressText.textContent = `Loading ${roundedProgress}%`;
 
     if (progressTrack) {
-        progressTrack.setAttribute("aria-valuenow", "0");
+      progressTrack.setAttribute(
+        "aria-valuenow",
+        String(roundedProgress)
+      );
     }
 
-    robot.currentTime = 0;
-
-    const robotPlayback = robot.play();
-
-    if (robotPlayback && typeof robotPlayback.catch === "function") {
-        robotPlayback.catch(error => {
-            console.warn("Robot video could not play:", error);
-        });
+    if (elapsed < loadingDuration) {
+      requestAnimationFrame(updateProgress);
+    } else {
+      progressBar.style.width = "100%";
+      progressText.textContent = "Almost there — say hi!";
     }
+  }
 
-    function updateProgress(now) {
-        const elapsed = now - startTime;
-        const progress = Math.min(100, (elapsed / loadingDuration) * 100);
-        const roundedProgress = Math.floor(progress);
+  requestAnimationFrame(updateProgress);
 
-        progressBar.style.width = `${progress}%`;
-        progressText.textContent = `Loading ${roundedProgress}%`;
-
-        if (progressTrack) {
-            progressTrack.setAttribute(
-                "aria-valuenow",
-                String(roundedProgress)
-            );
-        }
-
-        if (elapsed < loadingDuration) {
-            requestAnimationFrame(updateProgress);
-        } else {
-            progressBar.style.width = "100%";
-            progressText.textContent = "Almost there — say hi!";
-        }
-    }
-
-    requestAnimationFrame(updateProgress);
-
-    window.setTimeout(() => {
-        robot.pause();
-        preloader.style.display = "none";
-        playIntroVideo();
-    }, robotDuration);
+  window.setTimeout(() => {
+    robot.pause();
+    preloader.style.display = "none";
+    playIntroVideo();
+  }, robotDuration);
 }
 
 // 3. INTRO VIDEO LOGIC (STOPS AUDIO IMMEDIATELY ON SKIP)

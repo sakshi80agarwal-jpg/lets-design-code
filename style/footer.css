@@ -88,7 +88,7 @@ BRAND
     font-size: clamp(3rem, 7vw, 7rem);
     font-weight: 600;
 
-    line-height: 0.9;
+    line-height: 0.7;
     letter-spacing: -0.06em;
 }
 
@@ -101,9 +101,9 @@ BRAND
 .footer-brand p {
     margin-top: 1.5rem;
 
-    color: #c0c0c0;
+    color: var(--text-color);
 
-    font-size: 1.3rem;
+    font-size: 1.5rem;
     line-height: 1.6;
 }
 
@@ -115,7 +115,7 @@ ORBIT
 .footer-orbit {
     position: absolute;
 
-    border: 1px solid rgba(234, 88, 12, 0.35);
+    border: 1px solid var(--main-color);
 
     border-radius: 50%;
 
@@ -127,9 +127,9 @@ ORBIT
 
 .footer-orbit-one {
     width: 35rem;
-    height: 11rem;
+    height: 12rem;
 
-    top: 8%;
+    top: 2%;
     right: -5%;
 
     transform: rotate(-18deg);
@@ -140,7 +140,7 @@ ORBIT
     width: 27rem;
     height: 9rem;
 
-    top: 15%;
+    top: 10%;
     right: 4%;
 
     transform: rotate(-18deg);
@@ -179,12 +179,12 @@ DOODLES
 
 
 .footer-doodle-two {
-    right: 10%;
-    bottom: 10%;
+    right: 15%;
+    top: 28%;
 
-    color: var(--main-color);
+    color: var(--text-color);
 
-    transform: rotate(7deg);
+    
 }
 
 
@@ -316,13 +316,13 @@ ROLE
     position: absolute;
 
     right: 7%;
-    top: 42%;
+    top: 50%;
 
     z-index: 6;
 
-    color: #adacac;
+    color: #c4c2c2;
 
-    font-size: 0.8rem;
+    font-size: 0.92rem;
 
     letter-spacing: 0.18em;
 }
@@ -403,7 +403,7 @@ MOBILE FOOTER
     /* BRAND */
 
     .footer-brand {
-        top: 7%;
+        top: 12%;
         left: 7%;
         right: 7%;
     }
@@ -428,25 +428,7 @@ MOBILE FOOTER
     }
 
 
-    /* ORBITS */
-
-    .footer-orbit-one {
-        width: 20rem;
-        height: 7rem;
-
-        top: 15%;
-        right: -30%;
-    }
-
-
-    .footer-orbit-two {
-        width: 17rem;
-        height: 6rem;
-
-        top: 20%;
-        right: -15%;
-    }
-
+    
 
     /* DOODLES */
 
@@ -459,8 +441,8 @@ MOBILE FOOTER
 
 
     .footer-doodle-two {
-        right: 7%;
-        bottom: 31%;
+        right: 30%;
+        top: 35%;
 
         font-size: 1rem;
     }
@@ -473,7 +455,7 @@ MOBILE FOOTER
         right: auto;
 
         left: 7%;
-        bottom: 24%;
+        bottom: 40%;
 
         font-size: 0.8rem;
     }

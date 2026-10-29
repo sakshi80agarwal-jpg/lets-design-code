@@ -16,7 +16,7 @@
 .about-label span,
 .content-label {
     color: var(--main-color);
-    font-size: 0.7rem;
+    font-size: 1rem;
     font-weight: 600;
     letter-spacing: 0.15rem;
 }
@@ -141,7 +141,7 @@
     top: 0;
 
     background: #171a22;
-    border: 1px solid rgba(234, 88, 12, 0.7);
+    border: 1px solid var(--main-color);
     border-radius: 0.25rem;
 }
 
@@ -307,7 +307,7 @@
 .tab-text {
     flex: 1;
     text-align: left;
-    font-size: 0.8rem;
+    font-size: 1rem;
 }
 
 .tab-arrow {
@@ -340,7 +340,7 @@
     margin: 0;
 
     color: #aaa;
-    font-size: 0.9rem;
+    font-size: 0.95rem;
     line-height: 1.7;
 }
 
@@ -386,14 +386,13 @@
 
 .about-panel h3 {
     margin: 0.7rem 0 1rem;
-
     font-size: 1.4rem;
     line-height: 1.3;
 }
 
 .about-panel p {
     color: #999;
-    font-size: 0.82rem;
+    font-size: 0.95rem;
     line-height: 1.7;
 }
 
@@ -586,50 +585,118 @@
     color: var(--text-color);
 }
 
-/* =====================================================
-   PROCESS
-   ===================================================== */
 
-.process-list {
+/* ===== PROCESS JOURNEY ===== */
+
+.process-journey {
     display: flex;
     flex-direction: column;
     gap: 0;
-    margin-top: 1.5rem;
+    padding: 1rem 0.25rem 2rem;
+    overflow: visible;
 }
 
-.process-item {
+.process-journey .process-item {
+    width: 84%;
+    align-self: flex-start;
     display: grid;
-    grid-template-columns: 2.5rem 1fr;
+    grid-template-columns: 2.5rem minmax(0, 1fr);
     gap: 0.8rem;
-    padding: 0.85rem 0;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    padding: 1.1rem;
+    border: 1px solid rgba(67, 217, 255, 0.22);
+    border-radius: 0.9rem;
+    background: linear-gradient(135deg, #101A30, #080D1B);
+    box-shadow: 0 0 22px rgba(40, 123, 255, 0.08);
+
+    opacity: 0;
+    transform: translateY(24px);
+    transition: opacity 0.6s ease, transform 0.6s ease,
+                border-color 0.4s ease;
 }
 
-.process-number {
+.process-journey .process-item.process-right {
+    align-self: flex-end;
+}
+
+.process-journey .process-item.is-visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.process-journey .process-item:hover {
+    border-color: var(--main-color);
+}
+
+.process-journey .process-number {
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
     color: var(--main-color);
-    font-size: 0.7rem;
-    font-weight: 600;
-    line-height: 1.6;
-    letter-spacing: 0.04em;
+    font-size: 0.85rem;
+    font-weight: 700;
 }
 
-.process-item h4 {
-    margin: 0 0 0.3rem;
-    color: var(--text-color);
-    font-family: "DM Sans", sans-serif;
-    font-size: 0.9rem;
-    font-weight: 600;
-    line-height: 1.4;
+.process-journey .process-item h4 {
+    margin: 0 0 0.4rem;
+    font-size: 1rem;
 }
 
-.process-item p {
-    margin: 0;
-    color: #8b8b8b;
-    font-family: "DM Sans", sans-serif;
-    font-size: 0.72rem;
-    font-weight: 400;
-    line-height: 1.6;
+.process-journey .process-item p {
+    font-size: 0.8rem;
+    line-height: 1.65;
 }
+
+.process-connector {
+    width: 100%;
+    height: 64px;
+    color: var(--main-color);
+    opacity: 0.35;
+    transition: opacity 0.5s ease;
+}
+
+.process-connector svg {
+    width: 100%;
+    height: 100%;
+    overflow: visible;
+}
+
+.process-connector.is-visible {
+    opacity: 1;
+}
+
+.journey-path {
+    stroke-dasharray: 3 7;
+    stroke-dashoffset: 100;
+}
+
+.process-connector.is-visible .journey-path {
+    animation: journeyDraw 1.4s ease forwards,
+               journeyFlow 1.2s linear 1.4s infinite;
+}
+
+@keyframes journeyDraw {
+    to {
+        stroke-dashoffset: 0;
+    }
+}
+
+@keyframes journeyFlow {
+    to {
+        stroke-dashoffset: -20;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .process-journey .process-item {
+        transition: none;
+    }
+
+    .process-connector.is-visible .journey-path {
+        animation: none;
+        stroke-dashoffset: 0;
+    }
+}
+
 
 
 /* =====================================================
@@ -811,3 +878,6 @@
         height: 12rem;
     }
 }
+
+
+

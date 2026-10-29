@@ -43,53 +43,45 @@
 </head>
 
 <body>
-    
-<!-- PRELOADER -->
-<div id="preloader">
-    <img class="logo-img" src="assets/logo.png" alt="Let's Design.Code logo">
 
-    <!-- Independent cursor-following eyes -->
-    <div class="eye-tracker" aria-hidden="true">
-        <div class="eye"><div class="pupil"></div></div>
-        <div class="eye"><div class="pupil"></div></div>
-    </div>
+    <!-- PRELOADER -->
+    <div id="preloader">
+        <img class="logo-img" src="assets/logo.png" alt="Let's Design.Code logo">
 
-    <!-- Robot video: separate from the floating eyes -->
-    <div class="robot-stage">
-        <video
-            id="preloaderRobot"
-            class="robot-video"
-            src="assets/preloader-robot.mp4"
-            playsinline
-            muted
-            preload="auto"
-            aria-label="Robot welcoming visitors">
-        </video>
-        <span class="robot-greeting" id="robotGreeting">Hi!</span>
-    </div>
-
-    <div class="preloader-controls">
-        <div
-            class="progress-box"
-            role="progressbar"
-            aria-label="Loading progress"
-            aria-valuemin="0"
-            aria-valuemax="100"
-            aria-valuenow="0"
-            id="progressTrack">
-            <div class="progress-bar" id="progressBar"></div>
+        <!-- Independent cursor-following eyes -->
+        <div class="eye-tracker" aria-hidden="true">
+            <div class="eye">
+                <div class="pupil"></div>
+            </div>
+            <div class="eye">
+                <div class="pupil"></div>
+            </div>
         </div>
 
-        <span class="progress-text" id="progressText">
-            Ready when you are
-        </span>
+        <!-- Robot video: separate from the floating eyes -->
+        <div class="robot-stage">
+            <video id="preloaderRobot" class="robot-video" src="assets/preloader-robot.mp4" playsinline preload="auto"
+                aria-label="Robot welcoming visitors">
+            </video>
+            <span class="robot-greeting" id="robotGreeting">Hi!</span>
+        </div>
 
-        <button class="start-btn" id="startBtn" onclick="startLoading()">
-            <i class="bx bx-play"></i>
-            Start Experience
-        </button>
+        <div class="preloader-controls">
+            <div class="progress-box" role="progressbar" aria-label="Loading progress" aria-valuemin="0"
+                aria-valuemax="100" aria-valuenow="0" id="progressTrack">
+                <div class="progress-bar" id="progressBar"></div>
+            </div>
+
+            <span class="progress-text" id="progressText">
+                Ready when you are
+            </span>
+
+            <button class="start-btn" id="startBtn" onclick="startLoading()">
+                <i class="bx bx-play"></i>
+                Start Experience
+            </button>
+        </div>
     </div>
-</div>
 
 
     <!-- INTRO VIDEO OVERLAY -->
@@ -1458,123 +1450,103 @@
 
                         </div>
 
-                        <!-- PROCESS -->
 
                         <div class="about-panel" data-content="process">
 
-                            <span class="content-label">
-                                MY PROCESS
-                            </span>
+                            <span class="content-label">MY PROCESS</span>
 
-                            <h3>
-                                From <span>idea</span> to experience.
-                            </h3>
+                            <h3>From <span>idea</span> to experience.</h3>
 
                             <p>
                                 I combine thoughtful design with practical development
                                 to turn ideas into meaningful digital experiences.
                             </p>
 
+                            <div class="process-list process-journey">
 
-                            <div class="process-list">
-
-                                <div class="process-item">
-
-                                    <span class="process-number">
-                                        01
-                                    </span>
-
+                                <article class="process-item">
+                                    <span class="process-number">01</span>
                                     <div>
-                                        <h4>
-                                            Discover
-                                        </h4>
-
-                                        <p>
-                                            Understand the idea, goals, users and requirements.
-                                        </p>
+                                        <h4>Discover</h4>
+                                        <p>Understand the idea, goals, users and requirements.</p>
                                     </div>
+                                </article>
 
+                                <div class="process-connector" aria-hidden="true">
+                                    <svg viewBox="0 0 300 64" preserveAspectRatio="none">
+                                        <path d="M35 2 C35 42 265 22 265 54" fill="none" stroke="currentColor"
+                                            stroke-width="2" stroke-dasharray="3 7" stroke-linecap="round"
+                                            class="journey-path" />
+                                        <path d="M257 47 L265 55 L273 46" fill="none" stroke="currentColor"
+                                            stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                                    </svg>
                                 </div>
 
-
-                                <div class="process-item">
-
-                                    <span class="process-number">
-                                        02
-                                    </span>
-
+                                <article class="process-item process-right">
+                                    <span class="process-number">02</span>
                                     <div>
-                                        <h4>
-                                            Define
-                                        </h4>
-
-                                        <p>
-                                            Structure the problem and plan the overall experience.
-                                        </p>
+                                        <h4>Define</h4>
+                                        <p>Structure the problem and plan the overall experience.</p>
                                     </div>
+                                </article>
 
+                                <div class="process-connector connector-reverse" aria-hidden="true">
+                                    <svg viewBox="0 0 300 64" preserveAspectRatio="none">
+                                        <path d="M265 2 C265 42 35 22 35 54" fill="none" stroke="currentColor"
+                                            stroke-width="2" stroke-dasharray="3 7" stroke-linecap="round"
+                                            class="journey-path" />
+                                        <path d="M27 46 L35 55 L43 47" fill="none" stroke="currentColor"
+                                            stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                                    </svg>
                                 </div>
 
-
-                                <div class="process-item">
-
-                                    <span class="process-number">
-                                        03
-                                    </span>
-
+                                <article class="process-item">
+                                    <span class="process-number">03</span>
                                     <div>
-                                        <h4>
-                                            Design
-                                        </h4>
-
-                                        <p>
-                                            Create wireframes, visual direction, UI and prototypes.
-                                        </p>
+                                        <h4>Design</h4>
+                                        <p>Create wireframes, visual direction, UI and prototypes.</p>
                                     </div>
+                                </article>
 
+                                <div class="process-connector" aria-hidden="true">
+                                    <svg viewBox="0 0 300 64" preserveAspectRatio="none">
+                                        <path d="M35 2 C35 42 265 22 265 54" fill="none" stroke="currentColor"
+                                            stroke-width="2" stroke-dasharray="3 7" stroke-linecap="round"
+                                            class="journey-path" />
+                                        <path d="M257 47 L265 55 L273 46" fill="none" stroke="currentColor"
+                                            stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                                    </svg>
                                 </div>
 
-
-                                <div class="process-item">
-
-                                    <span class="process-number">
-                                        04
-                                    </span>
-
+                                <article class="process-item process-right">
+                                    <span class="process-number">04</span>
                                     <div>
-                                        <h4>
-                                            Develop
-                                        </h4>
-
-                                        <p>
-                                            Turn the design into a responsive and functional website.
-                                        </p>
+                                        <h4>Develop</h4>
+                                        <p>Turn the design into a responsive, functional website.</p>
                                     </div>
+                                </article>
 
+                                <div class="process-connector connector-reverse" aria-hidden="true">
+                                    <svg viewBox="0 0 300 64" preserveAspectRatio="none">
+                                        <path d="M265 2 C265 42 35 22 35 54" fill="none" stroke="currentColor"
+                                            stroke-width="2" stroke-dasharray="3 7" stroke-linecap="round"
+                                            class="journey-path" />
+                                        <path d="M27 46 L35 55 L43 47" fill="none" stroke="currentColor"
+                                            stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                                    </svg>
                                 </div>
 
-
-                                <div class="process-item">
-
-                                    <span class="process-number">
-                                        05
-                                    </span>
-
+                                <article class="process-item">
+                                    <span class="process-number">05</span>
                                     <div>
-                                        <h4>
-                                            Refine
-                                        </h4>
-
-                                        <p>
-                                            Test, polish interactions and improve the final experience.
-                                        </p>
+                                        <h4>Refine</h4>
+                                        <p>Test, polish interactions and improve the final experience.</p>
                                     </div>
-
-                                </div>
+                                </article>
 
                             </div>
-
                         </div>
+
 
                         <!-- BEYOND DESIGN -->
 
@@ -2124,8 +2096,7 @@
                     </h2>
 
                     <p>
-                        Where ideas find their shape<br>
-                        and code brings them to life.
+                        Where ideas find their shape and code brings them to life.
                     </p>
 
                 </div>
@@ -2138,7 +2109,7 @@
                 </div>
 
                 <div class="footer-doodle footer-doodle-two">
-                    Make something meaningful.
+                    Make something meaningful !
                 </div>
 
 

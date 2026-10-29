@@ -6,10 +6,26 @@
 ===================================================== */
 
 :root {
-    --bg-color: #080808;
-    --second-bg-color: #131313;
-    --text-color: #f7f0f0;
-    --main-color: #ea580c;
+    /* Main backgrounds */
+    --bg-color: #030611;
+    --second-bg-color: #101A30;
+
+    /* Text */
+    --text-color: #EAF1FF;
+
+    /* Primary accent */
+    --main-color: #287BFF;
+
+    /* Extended Electric Blue palette */
+    --electric-blue: #287BFF;
+    --electric-cyan: #43D9FF;
+    --deep-navy: #101A30;
+    --midnight: #030611;
+    --soft-white: #EAF1FF;
+    --muted-text: #9AAAC5;
+    --border-color: rgba(67, 217, 255, 0.18);
+    --glow-color: rgba(40, 123, 255, 0.35);
+    --cyan-glow: rgba(67, 217, 255, 0.20);
 }
 
 

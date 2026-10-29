@@ -96,7 +96,7 @@ if (aboutSection && idCardWrapper) {
 
         },
         {
-            threshold: 0.8
+            threshold: 0.2
         }
     );
 
@@ -219,3 +219,36 @@ navLinks.forEach(function(link) {
 
 // Set correct active link when page loads
 updateActiveNavLink();
+
+
+/* ===== PROCESS JOURNEY SCROLL REVEAL ===== */
+
+const aboutContent = document.querySelector(".about-content");
+const processPanel = document.querySelector(
+    '.about-panel[data-content="process"]'
+);
+
+if (aboutContent && processPanel) {
+    const journeyElements = processPanel.querySelectorAll(
+        ".process-item, .process-connector"
+    );
+
+    const journeyObserver = new IntersectionObserver(
+        function(entries) {
+            entries.forEach(function(entry) {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add("is-visible");
+                    journeyObserver.unobserve(entry.target);
+                }
+            });
+        },
+        {
+            root: aboutContent,
+            threshold: 0.2
+        }
+    );
+
+    journeyElements.forEach(function(element) {
+        journeyObserver.observe(element);
+    });
+}

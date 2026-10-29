@@ -96,7 +96,7 @@
     width: 40px;
     height: 40px;
 
-    border: 1px solid rgba(234, 88, 12, 0.35);
+    border: 1px solid var(--main-color);
     border-radius: 50%;
 
     color: var(--main-color);
@@ -108,7 +108,7 @@
 }
 
 .service-card:hover .service-icon {
-    background: rgba(234, 88, 12, 0.10);
+    background: var(--bg-color);
     transform: rotate(8deg);
 }
 
@@ -188,7 +188,7 @@
 
 .service-card:hover {
     transform: translateY(-5px);
-    border-color: rgba(234, 88, 12, 0.45);
+    border-color: var(--main-color);
 }
 
 .service-card:hover .service-arrow {
