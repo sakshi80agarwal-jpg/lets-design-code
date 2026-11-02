@@ -11,11 +11,14 @@
     <link rel="stylesheet" href="style/portfolio.css">
     <link rel="stylesheet" href="style/home.css">
     <link rel="stylesheet" href="style/work.css">
-    <link rel="stylesheet" href="style/services.css">
+    <link rel="stylesheet" href="style/experience.css">
     <link rel="stylesheet" href="style/about.css">
+    <link rel="stylesheet" href="style/services.css">
     <link rel="stylesheet" href="style/testimonial.css">
     <link rel="stylesheet" href="style/contact.css">
     <link rel="stylesheet" href="style/footer.css">
+    <link rel="stylesheet" href="style/chatbot.css">
+
 
     <!-- Boxicons CSS for Icons -->
     <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet" />
@@ -105,7 +108,7 @@
         <header class="header">
             <div class="logo">
                 <img src="assets/Navlogo.jpg" alt="">
-                <h2 class="title">Portfolio</h2>
+                <h2 class="title">Sakshi's Space</h2>
             </div>
 
             <!-- Hamburger Icon -->
@@ -116,8 +119,9 @@
             <nav class="navbar" id="navbar">
                 <a href="#home" class="nav-link" onclick="setActiveLink(this); closeMenu();">Home</a>
                 <a href="#work" class="nav-link" onclick="setActiveLink(this); closeMenu();">Work</a>
-                <a href="#services" class="nav-link" onclick="setActiveLink(this); closeMenu();">Services</a>
+                <a href="#experience" class="nav-link" onclick="setActiveLink(this); closeMenu();">Experience</a>
                 <a href="#about" class="nav-link" onclick="setActiveLink(this); closeMenu();">About</a>
+                <a href="#services" class="nav-link" onclick="setActiveLink(this); closeMenu();">Services</a>
                 <a href="#testimonials" class="nav-link" onclick="setActiveLink(this); closeMenu();">Testimonial</a>
                 <a href="#contact" class="nav-link" onclick="setActiveLink(this); closeMenu();">Contact</a>
             </nav>
@@ -134,7 +138,9 @@
                     development. I love turning ideas into meaningful digital experiences through thoughtful design and
                     creative development, bringing every detail to life through websites and digital products.</p>
                 <div class="bottom">
-                    <a href="#work" class="btn">View My Work</a>
+                    <a href="javascript:void(0)" class="btn" id="heroAssistantBtn">
+                        Ask My AI Assistant <i class='bx bx-message-rounded-dots'></i>
+                    </a>
 
                     <div class="social-media">
                         <a href="https://www.linkedin.com/in/sakshi-agarwal-6245343a4/"><i
@@ -163,19 +169,40 @@
          WORK INTRO
          ========================= -->
 
-            <div class="work-heading">
+            <div class="work-intro">
 
-                <span class="section-label">SELECTED WORK</span>
+                <div class="work-heading">
 
-                <h2>
-                    Things I've designed<br>
-                    <span>& brought to life.</span>
-                </h2>
+                    <span class="section-label">SELECTED WORK</span>
 
-                <p>
-                    A collection of projects where ideas, interfaces,
-                    interactions and code come together.
-                </p>
+                    <h2>
+                        Things I've designed<br>
+                        <span>& brought to life.</span>
+                    </h2>
+
+                    <p>
+                        A collection of projects where ideas, interfaces,
+                        interactions and code come together.
+                    </p>
+
+                </div>
+
+                <!-- CODING MASCOT -->
+                <div class="coding-mascot">
+
+                    <div class="mascot-bubble bubble-top">
+                        Just one small CSS change...
+                    </div>
+
+                    <div class="mascot-character">
+                        <img src="assets/work mascot.png" alt="Cute coding mascot">
+                    </div>
+
+                    <div class="mascot-bubble bubble-bottom">
+                        WHY IS EVERYTHING BROKEN?!
+                    </div>
+
+                </div>
 
             </div>
 
@@ -724,192 +751,104 @@
 
         </section>
 
+
         <!-- =====================================================
-     SERVICES
+     EXPERIENCE SECTION
      ===================================================== -->
 
-        <section class="services" id="services">
+        <section class="experience" id="experience">
 
-            <!-- SERVICES INTRO -->
+            <div class="experience-container">
 
-            <div class="services-heading">
+                <div class="experience-heading">
+                    <span class="section-label">MY JOURNEY</span>
 
-                <span class="section-label">WHAT I DO</span>
+                    <h2>
+                        Experience &
+                        <span>Growth.</span>
+                    </h2>
 
-                <h2>
-                    Design it. Build it.<br>
-                    <span>Make it meaningful.</span>
-                </h2>
-
-                <p>
-                    I combine thoughtful design with front-end development
-                    to create digital experiences that look good, feel intuitive,
-                    and actually work.
-                </p>
-
-            </div>
+                    <p>
+                        Every opportunity is a step forward.
+                        Here's a glimpse of my professional journey.
+                    </p>
+                </div>
 
 
-            <!-- SERVICES GRID -->
+                <div class="experience-timeline">
 
-            <div class="services-grid">
+                    <!-- UI/UX INTERNSHIP -->
 
+                    <article class="experience-item">
 
-                <!-- SERVICE 01 -->
+                        <div class="timeline-marker">
+                            <span></span>
+                        </div>
 
-                <article class="service-card">
+                        <div class="experience-card">
 
-                    <div class="service-top">
+                            <div class="experience-top">
+                                <span class="experience-type">INTERNSHIP</span>
+                                <span class="experience-status">ONGOING</span>
+                            </div>
 
-                        <div class="service-identity">
+                            <h3>UI/UX Design Intern</h3>
 
-                            <span class="service-number">01</span>
+                            <h4>Codomax Digital Solutions</h4>
 
-                            <span class="service-icon">✦</span>
+                            <span class="experience-date">
+                                31 October 2026 — 28 November 2026
+                            </span>
+
+                            <p>
+                                Gaining practical experience in UI/UX design
+                                and building a stronger understanding of
+                                real-world design workflows.
+                            </p>
 
                         </div>
 
-                        <span class="service-arrow">↗</span>
-
-                    </div>
+                    </article>
 
 
-                    <div class="service-content">
+                    <!-- FREELANCE EXPERIENCE -->
 
-                        <h3>UI/UX Design</h3>
+                    <article class="experience-item">
 
-                        <p>
-                            From idea to interface — creating user-focused
-                            digital experiences built around clarity,
-                            usability and thoughtful visual design.
-                        </p>
+                        <div class="timeline-marker">
+                            <span></span>
+                        </div>
 
-                    </div>
+                        <div class="experience-card">
 
+                            <div class="experience-top">
+                                <span class="experience-type">FREELANCE</span>
+                                <span class="experience-status completed">COMPLETED</span>
+                            </div>
 
-                    <div class="service-tags">
+                            <h3>Freelance Framer Designer</h3>
 
-                        <span>User Flows</span>
-                        <span>Wireframing</span>
-                        <span>UI Design</span>
-                        <span>Prototyping</span>
-                        <span>Design Systems</span>
+                            <h4>Independent Projects</h4>
 
-                    </div>
+                            <span class="experience-date">
+                                June 2026 — August 2026
+                            </span>
 
-                </article>
+                            <p>
+                                Designed and developed responsive websites
+                                for businesses using Framer, bringing
+                                their ideas to life through digital experiences.
+                            </p>
 
-
-                <!-- SERVICE 02 -->
-
-                <article class="service-card">
-
-                    <div class="service-top">
-
-                        <div class="service-identity">
-
-                            <span class="service-number">01</span>
-
-                            <span class="service-icon">◇</span>
+                            <div class="experience-projects">
+                                <span>Auto Palace</span>
+                                <span>Ekdanta Clinic</span>
+                                <span>Passion Fitness</span>
+                            </div>
 
                         </div>
 
-                        <span class="service-arrow">↗</span>
-
-                    </div>
-
-
-                    <div class="service-content">
-
-                        <h3>Web Design & Framer</h3>
-
-                        <p>
-                            Websites that feel as good as they look —
-                            with strong visual direction, clear structure,
-                            responsive layouts and engaging interactions.
-                        </p>
-
-                    </div>
-
-
-                    <div class="service-tags">
-
-                        <span>Landing Pages</span>
-                        <span>Responsive Design</span>
-                        <span>Framer</span>
-                        <span>Interactions</span>
-                        <span>Client Websites</span>
-
-                    </div>
-
-                </article>
-
-
-                <!-- SERVICE 03 -->
-
-                <article class="service-card">
-
-                    <div class="service-top">
-
-                        <div class="service-identity">
-
-                            <span class="service-number">01</span>
-
-                            <span class="service-icon">&lt;/&gt;</span>
-
-                        </div>
-
-                        <span class="service-arrow">↗</span>
-
-                    </div>
-
-
-                    <div class="service-content">
-
-                        <h3>Front-End Development</h3>
-
-                        <p>
-                            Bringing thoughtful designs to
-                            life through responsive,
-                            interactive interfaces built with
-                            clean code and purposeful details.
-                        </p>
-
-                    </div>
-
-
-                    <div class="service-tags">
-
-                        <span>HTML</span>
-                        <span>CSS</span>
-                        <span>JavaScript</span>
-                        <span>Responsive UI</span>
-                        <span>Interactions</span>
-
-                    </div>
-
-                </article>
-
-
-            </div>
-
-
-            <!-- SERVICES STATEMENT -->
-
-            <div class="services-statement">
-
-                <p>
-                    Good design shouldn't stop at the screen.
-                    <span>It should work behind it too.</span>
-                </p>
-
-                <div class="design-code-line">
-
-                    <span>DESIGN</span>
-
-                    <div class="connection-line"></div>
-
-                    <span>DEVELOPMENT</span>
+                    </article>
 
                 </div>
 
@@ -1614,6 +1553,201 @@
         </section>
 
         <!-- =====================================================
+     SERVICES
+     ===================================================== -->
+
+        <section class="services" id="services">
+
+            <!-- SERVICES INTRO -->
+
+            <div class="services-heading">
+
+                <span class="section-label">WHAT I DO</span>
+
+                <h2>
+                    Design it. Build it.<br>
+                    <span>Make it meaningful.</span>
+                </h2>
+
+                <p>
+                    I combine thoughtful design with front-end development
+                    to create digital experiences that look good, feel intuitive,
+                    and actually work.
+                </p>
+
+            </div>
+
+
+            <!-- SERVICES GRID -->
+
+            <div class="services-grid">
+
+
+                <!-- SERVICE 01 -->
+
+                <article class="service-card">
+
+                    <div class="service-top">
+
+                        <div class="service-identity">
+
+                            <span class="service-number">01</span>
+
+                            <span class="service-icon">✦</span>
+
+                        </div>
+
+                        <span class="service-arrow">↗</span>
+
+                    </div>
+
+
+                    <div class="service-content">
+
+                        <h3>UI/UX Design</h3>
+
+                        <p>
+                            From idea to interface — creating user-focused
+                            digital experiences built around clarity,
+                            usability and thoughtful visual design.
+                        </p>
+
+                    </div>
+
+
+                    <div class="service-tags">
+
+                        <span>User Flows</span>
+                        <span>Wireframing</span>
+                        <span>UI Design</span>
+                        <span>Prototyping</span>
+                        <span>Design Systems</span>
+
+                    </div>
+
+                </article>
+
+
+                <!-- SERVICE 02 -->
+
+                <article class="service-card">
+
+                    <div class="service-top">
+
+                        <div class="service-identity">
+
+                            <span class="service-number">01</span>
+
+                            <span class="service-icon">◇</span>
+
+                        </div>
+
+                        <span class="service-arrow">↗</span>
+
+                    </div>
+
+
+                    <div class="service-content">
+
+                        <h3>Web Design & Framer</h3>
+
+                        <p>
+                            Websites that feel as good as they look —
+                            with strong visual direction, clear structure,
+                            responsive layouts and engaging interactions.
+                        </p>
+
+                    </div>
+
+
+                    <div class="service-tags">
+
+                        <span>Landing Pages</span>
+                        <span>Responsive Design</span>
+                        <span>Framer</span>
+                        <span>Interactions</span>
+                        <span>Client Websites</span>
+
+                    </div>
+
+                </article>
+
+
+                <!-- SERVICE 03 -->
+
+                <article class="service-card">
+
+                    <div class="service-top">
+
+                        <div class="service-identity">
+
+                            <span class="service-number">01</span>
+
+                            <span class="service-icon">&lt;/&gt;</span>
+
+                        </div>
+
+                        <span class="service-arrow">↗</span>
+
+                    </div>
+
+
+                    <div class="service-content">
+
+                        <h3>Front-End Development</h3>
+
+                        <p>
+                            Bringing thoughtful designs to
+                            life through responsive,
+                            interactive interfaces built with
+                            clean code and purposeful details.
+                        </p>
+
+                    </div>
+
+
+                    <div class="service-tags">
+
+                        <span>HTML</span>
+                        <span>CSS</span>
+                        <span>JavaScript</span>
+                        <span>Responsive UI</span>
+                        <span>Interactions</span>
+
+                    </div>
+
+                </article>
+
+
+            </div>
+
+
+            <!-- SERVICES STATEMENT -->
+
+            <div class="services-statement">
+
+                <p>
+                    Good design shouldn't stop at the screen.
+                    <span>It should work behind it too.</span>
+                </p>
+
+                <div class="design-code-line">
+
+                    <span>DESIGN</span>
+
+                    <div class="connection-line"></div>
+
+                    <span>DEVELOPMENT</span>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =====================================================
      TESTIMONIALS SECTION
      ===================================================== -->
 
@@ -2185,9 +2319,98 @@
 
         </footer>
 
+        <!-- =====================================
+     FLOATING PORTFOLIO CHATBOT
+===================================== -->
+
+        <div class="portfolio-assistant" id="portfolioAssistant">
+
+            <!-- CHAT WINDOW -->
+            <div class="assistant-window" id="assistantWindow" aria-hidden="true">
+
+                <div class="assistant-header">
+                    <div class="assistant-profile">
+                        <div class="assistant-status"></div>
+                        <div>
+                            <h3>Portfolio Assistant</h3>
+                            <span>Here to help you explore</span>
+                        </div>
+                    </div>
+
+                    <button class="assistant-close" id="assistantClose" aria-label="Close chatbot">
+                        ×
+                    </button>
+                </div>
+
+                <div class="assistant-messages" id="assistantMessages">
+
+                    <div class="assistant-message bot-message">
+                        Hey there! 👋 I'm Sakshi's portfolio assistant.
+
+                        I can help you explore her projects, skills, design
+                        experience and ways to get in touch.
+
+                        What would you like to know?
+                    </div>
+
+                    <div class="assistant-suggestions" id="assistantSuggestions">
+
+                        <button class="suggestion-btn" data-question="Tell me about Sakshi's projects">
+                            Explore her projects
+                        </button>
+
+                        <button class="suggestion-btn" data-question="What are her skills?">
+                            Her skills
+                        </button>
+
+                        <button class="suggestion-btn" data-question="Tell me about her experience">
+                            Her experience
+                        </button>
+
+                        <button class="suggestion-btn" data-question="How can I contact Sakshi?">
+                            Contact Sakshi
+                        </button>
+
+                    </div>
+
+                </div>
+
+                <form class="assistant-input-area" id="assistantForm">
+
+                    <input type="text" id="assistantInput" placeholder="Ask me anything..." autocomplete="off"
+                        aria-label="Type your question" required>
+
+                    <button type="submit" aria-label="Send message">
+                        <i class="bx bx-send"></i>
+                    </button>
+
+                </form>
+
+                <div class="assistant-footer">
+                    <span>LET'S DESIGN<span>.CODE</span></span>
+                </div>
+
+            </div>
+
+
+            <!-- FLOATING ROBOT MASCOT -->
+            <button class="assistant-mascot" id="assistantMascot" aria-label="Open portfolio assistant"
+                aria-expanded="false">
+
+                <img src="assets/robot-mascot.png" alt="Portfolio assistant robot">
+
+                <span class="mascot-tooltip">Ask me anything!</span>
+
+                <span class="mascot-notification"></span>
+
+            </button>
+
+        </div>
+
 
         <script src="js/portfolio.js"></script>
         <script src="js/about.js"></script>
+        <script src="js/chatbot.js"></script>
 </body>
 
 </html>

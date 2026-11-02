@@ -253,6 +253,59 @@ function initScrollSpy() {
   });
 }
 
+
+// =========================================
+// EXPERIENCE TIMELINE SCROLL ANIMATION
+// =========================================
+
+const experienceSection = document.querySelector(".experience");
+const experienceTimeline = document.querySelector(".experience-timeline");
+const experienceItems = document.querySelectorAll(".experience-item");
+
+if (experienceSection && experienceTimeline && experienceItems.length) {
+
+  const revealObserver = new IntersectionObserver((entries) => {
+    entries.forEach((entry) => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add("is-visible");
+        revealObserver.unobserve(entry.target);
+      }
+    });
+  }, {
+    threshold: 0.2
+  });
+
+  experienceItems.forEach((item) => {
+    revealObserver.observe(item);
+  });
+
+  function updateTimelineProgress() {
+    const rect = experienceTimeline.getBoundingClientRect();
+    const viewportHeight = window.innerHeight;
+
+    const startPoint = viewportHeight * 0.75;
+    const distance = startPoint - rect.top;
+    const progress = Math.max(
+      0,
+      Math.min(100, (distance / rect.height) * 100)
+    );
+
+    experienceTimeline.style.setProperty(
+      "--timeline-progress",
+      `${progress}%`
+    );
+  }
+
+  window.addEventListener("scroll", updateTimelineProgress, {
+    passive: true
+  });
+
+  window.addEventListener("resize", updateTimelineProgress);
+
+  updateTimelineProgress();
+}
+
+
 // =====================================================
 // CONTACT VIDEO
 // =====================================================

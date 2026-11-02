@@ -544,7 +544,7 @@ header {
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: 20px;
+    gap: 16px;
 }
 
 .logo img {
@@ -553,7 +553,7 @@ header {
 }
 
 .logo h2 {
-    font-size: 2rem;
+    font-size: 1.5rem;
     font-weight: 800;
     letter-spacing: 0.2rem;
 }
@@ -566,7 +566,7 @@ header {
 }
 
 .navbar a {
-    font-size: 1.5rem;
+    font-size: 1.4rem;
     color: var(--text-color);
     margin-left: 2.5rem;
     transition: 0.3s;
@@ -623,7 +623,7 @@ section {
     }
 
     .logo h2 {
-        font-size: 1.5rem;
+        font-size: 1.4rem;
         font-weight: 600;
         letter-spacing: 0.1rem;
     }
